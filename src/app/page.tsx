@@ -7,6 +7,7 @@ import { TabGroup } from '@/components/ui/TabGroup';
 import { Accordion } from '@/components/ui/Accordion';
 import { RelatedUseCases } from '@/components/sections/RelatedUseCases';
 import { HeroDemoWidget } from '@/components/sections/HeroDemoWidget';
+import { BackedBySpeechify } from '@/components/sections/BackedBySpeechify';
 import { relatedUseCases, platformFeatureTabs, voiceFeatures, enterpriseSecurityFeatures } from '@/data/shared';
 import Link from 'next/link';
 
@@ -261,6 +262,9 @@ export default function HomePage() {
 
       {/* Related Use Cases */}
       <RelatedUseCases items={relatedUseCases} />
+
+      {/* Built by Speechify — credibility section above footer */}
+      <BackedBySpeechify />
     </>
   );
 }
