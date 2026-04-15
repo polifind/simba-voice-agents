@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap');
+  font-display: swap;
+}
+
+@theme inline {
+  --color-simba-blue: #2F43FA;
+  --color-simba-blue-light: #5B6BFF;
+  --color-simba-blue-dark: #1A2FE0;
+  --color-simba-black: #000000;
+  --color-simba-white: #FFFFFF;
+  --color-simba-gray-50: #F9FAFB;
+  --color-simba-gray-100: #F3F4F6;
+  --color-simba-gray-200: #E5E7EB;
+  --color-simba-gray-300: #D1D5DB;
+  --color-simba-gray-400: #9CA3AF;
+  --color-simba-gray-500: #6B7280;
+  --color-simba-gray-600: #4B5563;
+  --color-simba-gray-700: #374151;
+  --color-simba-gray-800: #1F2937;
+  --color-simba-gray-900: #111827;
+  --color-simba-dark: #0A0A0F;
+  --color-simba-dark-card: #111118;
+  --font-sans: 'Satoshi', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-simba-white);
+  color: var(--color-simba-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
