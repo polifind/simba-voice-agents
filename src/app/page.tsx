@@ -73,7 +73,7 @@ export default function HomePage() {
                 Deploy natural, human-sounding agents in 70+ languages with low latency across voice or chat. Connected to your knowledge base and tools, our agents handle complex workflows end-to-end.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button href="/get-started" size="lg">Create an AI Agent</Button>
+                <Button href="/signup" size="lg">Create an AI Agent</Button>
                 <Button href="/contact" variant="secondary" size="lg">Talk to Sales</Button>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function HomePage() {
           <p className="text-simba-gray-500 mb-8">Lower rates on annual Business plans</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button href="/contact" variant="secondary" size="lg">Talk to Sales</Button>
-            <Button href="/get-started" size="lg">Create an AI Agent</Button>
+            <Button href="/signup" size="lg">Create an AI Agent</Button>
           </div>
         </div>
       </SectionWrapper>

@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState, FormEvent } from 'react';
+import { useCallback, useEffect, useRef, useState, FormEvent } from 'react';
 import clsx from 'clsx';
+import { ConversationProvider, useConversation } from '@elevenlabs/react';
 
 type Mode = 'voice' | 'chat' | 'call';
 
@@ -64,6 +65,165 @@ function generateReply(input: string): string {
   return 'That\'s a great question. For specifics tailored to your use case, click "Talk to Sales" above — or ask me about pricing, integrations, languages, or how I handle support.';
 }
 
+// ============================================================================
+// Voice mode — real ElevenLabs conversation
+// ============================================================================
+function VoiceMode() {
+  // The useConversation hook requires a ConversationProvider in its tree.
+  return (
+    <ConversationProvider>
+      <VoiceModeInner />
+    </ConversationProvider>
+  );
+}
+
+function VoiceModeInner() {
+  const [error, setError] = useState<string | null>(null);
+  const [starting, setStarting] = useState(false);
+
+  const conversation = useConversation({
+    onError: (err) => {
+      console.error('[ElevenLabs] error', err);
+      setError('Something went wrong. Please try again.');
+    },
+  });
+
+  const status = conversation.status; // 'disconnected' | 'connecting' | 'connected'
+  const isActive = status === 'connected';
+  const isConnecting = status === 'connecting' || starting;
+  const isSpeaking = conversation.isSpeaking;
+
+  const start = useCallback(async () => {
+    setError(null);
+    setStarting(true);
+    try {
+      // Ask for mic permission up-front so a denial shows a clear error.
+      await navigator.mediaDevices.getUserMedia({ audio: true });
+
+      const res = await fetch('/api/elevenlabs/signed-url', { cache: 'no-store' });
+      if (!res.ok) throw new Error(`signed-url ${res.status}`);
+      const { signed_url } = await res.json();
+      if (!signed_url) throw new Error('No signed URL returned');
+
+      await conversation.startSession({ signedUrl: signed_url, connectionType: 'websocket' });
+    } catch (err) {
+      console.error('[VoiceMode] failed to start', err);
+      const msg = err instanceof Error ? err.message : 'Unable to start conversation';
+      setError(
+        msg.toLowerCase().includes('permission') || msg.toLowerCase().includes('denied')
+          ? 'Microphone access denied. Enable mic permissions and try again.'
+          : 'Could not connect. Please try again.'
+      );
+    } finally {
+      setStarting(false);
+    }
+  }, [conversation]);
+
+  const stop = useCallback(async () => {
+    try {
+      await conversation.endSession();
+    } catch (err) {
+      console.error('[VoiceMode] failed to end', err);
+    }
+  }, [conversation]);
+
+  // Safety: make sure we end the session if the component unmounts mid-call.
+  useEffect(() => {
+    return () => {
+      if (conversation.status === 'connected') {
+        conversation.endSession().catch(() => {});
+      }
+    };
+    // Intentionally only cleanup on unmount.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const label = isConnecting
+    ? 'Connecting…'
+    : isActive
+      ? isSpeaking
+        ? 'SIMBA is speaking…'
+        : 'Listening — start talking'
+      : 'Tap the orb to talk';
+
+  const handleClick = () => {
+    if (isActive) stop();
+    else if (!isConnecting) start();
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center gap-5">
+      <button
+        type="button"
+        onClick={handleClick}
+        disabled={isConnecting}
+        aria-label={isActive ? 'End voice conversation' : 'Start voice conversation'}
+        className={clsx(
+          'relative h-36 w-36 rounded-full transition-transform',
+          'focus:outline-none focus-visible:ring-4 focus-visible:ring-simba-blue/40',
+          !isConnecting && 'hover:scale-105 active:scale-95',
+          isConnecting && 'cursor-wait'
+        )}
+      >
+        {/* Main orb */}
+        <span
+          className={clsx(
+            'absolute inset-0 rounded-full bg-gradient-to-br from-simba-blue to-simba-blue-light',
+            isActive && isSpeaking && 'animate-pulse',
+            !isActive && !isConnecting && 'opacity-80',
+            isActive && !isSpeaking && 'opacity-90'
+          )}
+        />
+        {/* Outer glow */}
+        <span
+          className={clsx(
+            'absolute -inset-2 rounded-full bg-gradient-to-tr from-simba-blue/50 to-transparent blur-xl',
+            isActive && isSpeaking ? 'opacity-100 animate-pulse' : 'opacity-60'
+          )}
+        />
+        {/* Listening ring */}
+        {isActive && !isSpeaking && (
+          <>
+            <span className="absolute -inset-1 rounded-full border-2 border-simba-blue/60 animate-ping" />
+            <span className="absolute -inset-3 rounded-full border border-simba-blue/30 animate-ping" style={{ animationDelay: '400ms' }} />
+          </>
+        )}
+        {/* Icon */}
+        <span className="absolute inset-0 flex items-center justify-center text-white">
+          {isActive ? (
+            // Stop icon
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-10 w-10">
+              <rect x="6" y="6" width="12" height="12" rx="2" />
+            </svg>
+          ) : isConnecting ? (
+            // Loader
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-10 w-10 animate-spin">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="40 20" strokeLinecap="round" />
+            </svg>
+          ) : (
+            // Mic icon
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-10 w-10">
+              <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Z" />
+              <path d="M19 11a7 7 0 0 1-14 0h2a5 5 0 0 0 10 0h2Z" />
+              <path d="M11 18h2v3h-2z" />
+            </svg>
+          )}
+        </span>
+      </button>
+
+      <div className="text-center min-h-[2rem]">
+        <div className="text-sm font-semibold text-simba-gray-900">{label}</div>
+        {error && (
+          <div className="mt-1 text-xs text-red-600">{error}</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ============================================================================
+// Main widget
+// ============================================================================
 export function HeroDemoWidget() {
   const [mode, setMode] = useState<Mode>('voice');
 
@@ -130,13 +290,8 @@ export function HeroDemoWidget() {
           ))}
         </div>
 
-        <div className={clsx('flex items-center justify-center', mode === 'chat' ? 'py-2' : 'py-16', 'min-h-[340px]')}>
-          {mode === 'voice' && (
-            <div className="relative">
-              <div className="h-36 w-36 rounded-full bg-gradient-to-br from-simba-blue to-simba-blue-light opacity-80 animate-pulse" />
-              <div className="absolute inset-0 h-36 w-36 rounded-full bg-gradient-to-tr from-simba-blue/50 to-transparent blur-xl" />
-            </div>
-          )}
+        <div className={clsx('flex items-center justify-center', mode === 'chat' ? 'py-2' : 'py-10', 'min-h-[340px]')}>
+          {mode === 'voice' && <VoiceMode />}
 
           {mode === 'chat' && (
             <div className="w-full flex flex-col gap-3">
