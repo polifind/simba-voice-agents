@@ -107,7 +107,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button href="/contact" variant="secondary" size="sm">Contact Sales</Button>
-            <Button href="/get-started" size="sm">Get Started</Button>
+            <Button href="/login" size="sm">Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,7 +147,7 @@ export function Header() {
             </Link>
             <div className="flex flex-col gap-3 pt-6">
               <Button href="/contact" variant="secondary">Contact Sales</Button>
-              <Button href="/get-started">Get Started</Button>
+              <Button href="/login">Get Started</Button>
             </div>
           </div>
         </div>
