@@ -12,11 +12,9 @@ export function SimbaLogo({ className = '' }: { className?: string }) {
         className="h-7 w-7"
         priority
       />
-      <span className="text-xl font-black tracking-tight text-simba-black">
-        SIMBA
-      </span>
-      <span className="text-xl font-medium tracking-tight text-simba-gray-500">
-        Voice Agents
+      <span className="text-xl tracking-tight">
+        <span className="font-black text-simba-black">SIMBA</span>{' '}
+        <span className="font-medium text-simba-gray-500">Voice Agents</span>
       </span>
     </Link>
   );
@@ -33,11 +31,9 @@ export function SimbaLogoWhite({ className = '' }: { className?: string }) {
         className="h-7 w-7 invert"
         priority
       />
-      <span className="text-xl font-black tracking-tight text-white">
-        SIMBA
-      </span>
-      <span className="text-xl font-medium tracking-tight text-white/60">
-        Voice Agents
+      <span className="text-xl tracking-tight">
+        <span className="font-black text-white">SIMBA</span>{' '}
+        <span className="font-medium text-white/60">Voice Agents</span>
       </span>
     </Link>
   );
