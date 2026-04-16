@@ -1,21 +1,21 @@
 import { PageShell } from '@/components/dashboard/PageShell';
-import { EmptyState } from '@/components/dashboard/EmptyState';
-import { BeakerIcon } from '@heroicons/react/24/outline';
+import { TestsPageClient } from '@/components/dashboard/TestsPageClient';
+import { listAgents } from '@/lib/elevenlabs';
+
+export const dynamic = 'force-dynamic';
 
 export default async function TestsPage() {
+  let agents: { agent_id: string; name: string }[] = [];
+  try {
+    const data = await listAgents();
+    agents = (data.agents ?? []).map((a) => ({ agent_id: a.agent_id, name: a.name }));
+  } catch {
+    // soft fail
+  }
+
   return (
     <PageShell title="Tests">
-      <h1 className="text-3xl font-black tracking-tight text-simba-black">
-        Tests
-      </h1>
-
-      <div className="mt-6">
-        <EmptyState
-          icon={<BeakerIcon />}
-          title="No tests found"
-          description="Create test scenarios to validate agent behavior."
-        />
-      </div>
+      <TestsPageClient agents={agents} />
     </PageShell>
   );
 }
