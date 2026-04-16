@@ -1,0 +1,212 @@
+---
+title: "The Anatomy of a Voice Agent Pipeline"
+slug: "the-anatomy-of-a-voice-agent-pipeline"
+---
+
+If you took every voice agent in production today and dissected them, you'd find roughly the same skeleton. The names change. The vendors change. The plumbing details vary. But the bones are the same: a telephony layer feeds audio into a streaming recognizer, the recognizer feeds text to an LLM, the LLM hands replies to a TTS engine, and the TTS engine pushes audio back out the way it came.
+
+This piece is the reference diagram. If you're building, comparing vendors, or trying to figure out why your latency is bad, having the full pipeline in your head is worth more than any benchmark.
+
+## TL;DR
+
+- A production voice agent has 8 distinct layers, each with its own failure mode.
+- The pipeline is shaped less like a sequence and more like a flowing river — every stage is streaming, and most stages overlap in time.
+- Three places eat most of your latency budget: the endpointer, the LLM time-to-first-token, and the TTS time-to-first-audio.
+- The hidden complexity isn't in the AI models. It's in the orchestration, telephony glue, and post-call handling.
+
+## The eight layers
+
+In order from "audio comes in" to "audio goes out and the call ends":
+
+### Layer 1 — Telephony / transport
+
+The pipe. PSTN audio arrives via a telephony provider (Twilio, Plivo, Telnyx, Bandwidth) or a SIP trunk you operate yourself. Web audio comes via WebRTC. Either way, you get a continuous audio stream — typically PCM 16-bit at 8 kHz (phone) or 16 kHz (WebRTC) — and a control channel.
+
+Done badly, this layer alone adds 100–300ms of latency. Done well, you carve it down to 30–80ms by terminating audio at a server in the same region as your STT and routing accordingly.
+
+We have a separate piece on [SIP trunking 101 for voice agent builders](/resources/sip-trunking-101-for-voice-agent-builders) if you're picking telephony.
+
+### Layer 2 — Voice activity detection (VAD)
+
+The simplest signal in the pipeline: is the human speaking right now? Open-source models like Silero VAD or webrtc-vad ship out of the box. They run in CPU on a small frame size (10–30ms) and produce a binary "speech or not" stream.
+
+VAD is your earliest signal that something is happening, and it's the input to the endpointer. It also triggers barge-in detection.
+
+### Layer 3 — Streaming STT / ASR
+
+Audio in, text out, continuously. Streaming partials every 50–100ms; final transcript when the endpointer fires.
+
+Pick based on three things: WER on your audio domain, latency to first partial, and language coverage. Custom vocabulary support is underrated — it's the difference between an agent that gets your product names right and one that doesn't.
+
+### Layer 4 — Endpointer
+
+Watches VAD + transcript + audio prosody and decides "the caller is done speaking, *now* trigger the LLM." Get this wrong and the agent either jumps in mid-sentence (rude) or sits in 1.5 seconds of dead air after every caller utterance (slow).
+
+Rule of thumb: a fixed silence threshold of 600–800ms is the lazy version. A learned endpointer that reads sentence completeness from the transcript is the right version. Difference between the two is often 300ms of perceived latency.
+
+### Layer 5 — LLM / orchestration
+
+The brain. Inputs: system prompt, running transcript, tool schemas, retrieved knowledge. Outputs: text reply, optionally a function call.
+
+What "orchestration" actually means in production:
+
+- **Function calling.** When the LLM decides "I need to look up this caller," your code intercepts the function call, runs it against your CRM, and returns the result. The model then continues with the new context.
+- **Retrieval.** Before sending the prompt, you may pull relevant docs from a knowledge base — a returns policy, a product spec — and stitch them into context.
+- **Guardrails.** A second-pass check that the reply doesn't say something it shouldn't. (Examples: never quote a price the model invented, never agree to a refund above $X.)
+- **Streaming.** Token-by-token output so TTS can start synthesizing before the model finishes thinking.
+
+We have a deep piece on [function calling for voice agents: a practical guide](/resources/function-calling-for-voice-agents-a-practical-guide).
+
+### Layer 6 — TTS
+
+Text in, audio out. Streaming if your TTS supports it. The output is audio chunks (Opus, MP3, or raw PCM) that get pushed back through the telephony layer.
+
+The single most important property here is *time to first audio chunk*. Some TTS vendors hit 150ms. Others sit at 800ms. That delta is felt directly by the caller.
+
+### Layer 7 — Barge-in handler
+
+Runs in parallel with TTS playback. Watches incoming VAD; if the caller starts talking while the agent is talking, you immediately stop TTS, flush the audio buffer at the telephony layer, cancel any pending LLM tokens that would have been spoken, and go back to listening.
+
+The hard part is the flush. If you don't drop the audio buffered at Twilio's edge, the agent keeps talking for another 500ms after the caller starts. We cover this in [how voice agents handle interruptions gracefully](/resources/how-voice-agents-handle-interruptions-gracefully).
+
+### Layer 8 — Post-call
+
+Often forgotten, often where the real product value lives:
+
+- **Transcript persistence** — where the call gets logged for later review.
+- **Summary generation** — a one-paragraph summary written by an LLM after hangup.
+- **CRM sync** — a structured note posted to Salesforce, HubSpot, or wherever the system of record lives.
+- **Webhook fires** — if the call resulted in a booked appointment, a follow-up SMS, or an escalation, the right systems get pinged.
+- **Analytics** — call duration, intents detected, resolution status, sentiment.
+
+The post-call layer is what turns a voice agent from a novelty into a business tool. Without it, you have voice — without it, no one above your team will ever look at the data.
+
+## How the layers actually run (it's not a sequence)
+
+Drawing the pipeline as a left-to-right pipe is misleading. It's actually closer to a set of overlapping conveyor belts:
+
+```
+Caller audio:        ████████████████████████████____________________________
+VAD:                 _███████████████████████████____________________________
+STT partials:        ___█▓█▓█▓█▓█▓█▓█▓█▓█▓█▓█████____________________________
+Endpointer fires:                                █_______________________________
+LLM:                                              ▓▓▓▓▓▓▓▓▓▓▓____________________
+TTS:                                                  ████████████████__________
+Agent audio out:                                          ████████████████████
+Caller listening:                                          ████████████████████
+```
+
+Three things to notice:
+
+1. **STT runs concurrently with the caller talking.** It's not "wait for the caller to finish, then transcribe." Partial transcripts are flowing in real time.
+2. **TTS starts before the LLM is done.** The first sentence of the reply gets synthesized while the model is still generating the rest.
+3. **The endpointer is the choke point.** It's the only stage that *cannot* overlap with anything else — by definition, it's the moment we decide to stop listening and start replying.
+
+That's why endpointer quality is the highest-leverage tuning parameter in the entire stack.
+
+## Where most builds go wrong
+
+Pattern matching across dozens of voice agent builds, the failure modes cluster into a small number of bins:
+
+- **Treating each layer as independent.** "Pick the best STT, pick the best LLM, pick the best TTS." Doesn't work — the interfaces between layers are where most of the latency lives.
+- **Ignoring the endpointer.** Default 1-second silence threshold, no prosodic features, awkward pauses on every utterance.
+- **No streaming TTS.** Wait for the LLM to finish, then synthesize. Adds 500ms+ of perceived latency for no reason.
+- **No barge-in.** Caller has to wait politely for the agent to finish a sentence before they can interject. Feels robotic.
+- **No post-call layer.** The call happens, but nothing useful flows out of it. CRM stays empty.
+- **Function calls without retries.** A flaky CRM lookup → agent hallucinates an answer → caller gets wrong info.
+
+## The integration question: build vs buy each layer
+
+For each layer, the build-vs-buy decision is different:
+
+| Layer | Build it yourself? | Why |
+|---|---|---|
+| Telephony | No | Twilio/Plivo are good and cheap |
+| VAD | No | Silero is free and works |
+| STT | Almost never | Hosted models are 10x better than what you'd build |
+| Endpointer | Sometimes | Off-the-shelf is OK; custom is better |
+| LLM | Almost never | Use a hosted model; swap as needed |
+| Orchestration | Yes (or use a platform) | This is where your business logic lives |
+| TTS | Almost never | Hosted neural TTS is years ahead of open-source |
+| Barge-in | Build (or use platform) | Glue code, but critical |
+| Post-call | Build | Specific to your CRM and workflows |
+
+For the lazy-but-correct path, most teams pick a voice agent platform that handles layers 1–7 and lets them write their own orchestration and post-call logic.
+
+## A complete reference architecture
+
+Putting it all together, here's the architecture diagram for a production voice agent:
+
+```
+                     ┌────────────┐
+                Caller│   PSTN     │
+                     └─────┬──────┘
+                           │ audio
+                     ┌─────▼──────┐
+                     │ Telephony  │  Twilio / Plivo / SIP
+                     │   (Layer 1)│
+                     └─────┬──────┘
+                           │ PCM frames
+                  ┌────────┼────────┐
+                  │        │        │
+            ┌─────▼──┐ ┌──▼──┐  ┌──▼─────────┐
+            │  VAD   │ │ STT │  │  Barge-in  │
+            │ (L2)   │ │(L3) │  │   (L7)     │
+            └─────┬──┘ └──┬──┘  └────────────┘
+                  │       │
+              ┌───▼───────▼───┐
+              │  Endpointer   │
+              │     (L4)      │
+              └───┬───────────┘
+                  │ "caller done"
+              ┌───▼─────────────────────────┐
+              │       LLM + Orchestration   │
+              │             (L5)            │
+              │                              │
+              │  ┌─────────┐  ┌────────────┐ │
+              │  │ tools / │  │ retrieval  │ │
+              │  │ funcs   │  │ guardrails │ │
+              │  └─────────┘  └────────────┘ │
+              └───┬─────────────────────────┘
+                  │ streaming text
+              ┌───▼──────┐
+              │   TTS    │
+              │  (L6)    │
+              └───┬──────┘
+                  │ audio frames
+                  ▼
+              back to telephony → caller
+
+After hangup:
+              ┌──────────────┐
+              │  Post-call   │
+              │    (L8)      │
+              │              │
+              │ summary, CRM │
+              │ sync, webhooks│
+              │ analytics    │
+              └──────────────┘
+```
+
+That's the whole picture. Every voice agent platform you can name fits this shape — they just package the layers differently.
+
+<SimbaCallout>
+SIMBA implements all eight layers with sensible defaults, then gives you a programmable surface for the orchestration and post-call layers — the parts that are uniquely yours.
+</SimbaCallout>
+
+## FAQ
+
+**Do I need every layer?**
+For a real production agent, yes. Cutting layers (no barge-in, no post-call) ships faster but creates obvious quality gaps that you'll feel within a week of going live.
+
+**What's the cheapest path to a working prototype?**
+Pick a platform that gives you layers 1–7 out of the box. Wire your business logic into the orchestration layer. Don't try to assemble the stack from scratch on day one.
+
+**Where does multimodal input fit in (e.g., the caller sends a photo)?**
+Multimodal voice agents are still rare in 2026 because most calls happen on PSTN, which has no image channel. WebRTC-based voice agents are starting to support image and screen-share inputs alongside audio.
+
+**Can the LLM live on the same server as STT and TTS?**
+It can, and for very latency-sensitive deployments people do this. The downside is operational — running GPU inference for STT, LLM, and TTS on the same box is a lot to manage. Most teams use separate hosted services and accept the tiny network cost.
+
+**Where does sentiment analysis fit?**
+Either in real time inside the orchestration layer (rare — adds latency) or in the post-call layer (common). Real-time sentiment is mostly a "interesting but rarely useful" feature in production.

@@ -87,9 +87,15 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <SimbaLogoWhite />
-          <p className="text-sm text-white/40">
-            &copy; {new Date().getFullYear()} SIMBA Voice Agents. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm text-white/40">
+            <div className="flex items-center gap-4">
+              <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+              <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            </div>
+            <p>
+              &copy; {new Date().getFullYear()} SIMBA Voice Agents, a project of Speechify, Inc.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

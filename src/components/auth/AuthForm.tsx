@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 
@@ -75,9 +76,14 @@ export function AuthForm({ mode }: Props) {
       {/* Brand */}
       <div className="flex flex-col items-center mb-14">
         <Link href="/" className="flex items-center gap-2 text-simba-black">
-          <span className="h-7 w-7 rounded-md bg-gradient-to-br from-simba-blue to-simba-blue-light flex items-center justify-center text-white font-black text-sm">
-            S
-          </span>
+          <Image
+            src="/simba-mark.png"
+            alt="SIMBA"
+            width={28}
+            height={28}
+            className="h-7 w-7"
+            priority
+          />
           <span className="text-xl font-black tracking-tight">SIMBA</span>
         </Link>
       </div>

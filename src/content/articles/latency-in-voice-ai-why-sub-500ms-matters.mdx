@@ -1,0 +1,155 @@
+---
+title: "Latency in Voice AI: Why Sub-500ms Matters"
+slug: "latency-in-voice-ai-why-sub-500ms-matters"
+---
+
+When two humans talk, the gap between one person finishing a sentence and the other starting their reply is tiny — usually around 200ms. Sometimes the next person starts speaking *before* the first person has actually finished, predicting the end of the sentence. We are not patient creatures.
+
+A voice agent has to fit into that human rhythm. If it doesn't, the conversation feels broken — even if every word is correct. This is the whole reason latency matters for voice AI more than it matters for almost any other software product.
+
+## TL;DR
+
+- The natural human "turn-taking gap" is 200–250ms. Conversations with longer gaps feel sluggish.
+- Voice agents that respond in under 500ms feel responsive. Under 800ms feels acceptable. Above 1 second feels wrong.
+- The latency budget has three movable parts: endpointer delay, LLM time-to-first-token, and TTS time-to-first-audio.
+- Streaming everything is the cheapest 5x speedup. Picking the right model for each layer is the most expensive 2x.
+- Latency is not a single number — it's a distribution. The p99 is what makes or breaks the experience.
+
+## The science of conversational silence
+
+Linguists who study conversation have a name for the small pause between turns: *transition relevance place* or TRP. Across languages and cultures, the median TRP lands at 200–250ms. We hit that number not because we're processing speech that fast — we aren't — but because we're predicting the end of the other person's sentence and prepping our reply in parallel.
+
+When a voice agent breaks that rhythm, the listener notices immediately. There's a body of UX research on web latency that says anything over 1 second breaks the user's flow. Voice is even more sensitive because the audio channel is always-on; you don't get the luxury of a "loading" indicator.
+
+The takeaway: **the latency target isn't "fast." It's "natural."** And natural is sub-500ms.
+
+## What's eating your latency budget
+
+Let's open the budget for a typical voice agent and see where the milliseconds go.
+
+### 1. Endpointer delay (200–600ms)
+
+After the caller stops talking, *something* has to decide they're actually done. The naive approach is "wait N milliseconds of silence." A 200ms threshold is too aggressive — humans pause mid-thought all the time. A 600ms threshold is safe but wastes 400ms on every turn.
+
+Better systems use a learned model that combines silence detection with the caller's prosody (does the sentence end with a falling intonation?) and lexical completeness (does the transcript so far parse as a complete thought?). With a smart endpointer you can get the median delay down to 250–350ms.
+
+This is the single biggest knob in the entire latency budget. We have a piece on [voice activity detection in production voice agents](/resources/voice-activity-detection-in-production-voice-agents) that goes deeper.
+
+### 2. LLM time-to-first-token (150–600ms)
+
+The model has to take the prompt + transcript + tool schemas and emit the first token. This depends on:
+
+- **Model size.** Smaller is faster. A 7B parameter model can hit 80ms TTFT on a tuned GPU. A 70B model is closer to 250ms. Frontier hosted models (GPT-4o, Claude Sonnet, Gemini Flash) tend to land around 200–400ms TTFT.
+- **Prompt length.** A 4,000-token system prompt costs more to process than a 400-token one. The math is roughly 20–60ms per 1k input tokens depending on the model.
+- **Model serving.** Speculative decoding, prefix caching, dedicated capacity — all real and meaningful. A model that "should" hit 150ms TTFT can sit at 700ms if it's on a shared serverless endpoint that just got a cold start.
+
+For a voice agent, you should aim for **median TTFT of 250ms or less**. Anything more starts to feel laggy.
+
+### 3. TTS time-to-first-audio (100–500ms)
+
+After the LLM emits its first chunk of text, TTS has to start synthesizing audio. Modern neural TTS systems vary wildly here:
+
+- ElevenLabs Flash: 150–200ms
+- Cartesia Sonic: 100–180ms
+- OpenAI TTS: 300–500ms
+- Older neural TTS: 500–800ms
+
+Streaming TTS is essential. Without it, you'd wait for the LLM to finish its full reply, then synthesize the whole thing, then start playback. Adds 500ms+ for no good reason.
+
+### 4. Network latency (50–200ms)
+
+The audio has to travel from the caller's phone to your servers and back. PSTN to your data center via Twilio adds 50–100ms each way. WebRTC is similar. SIP trunks vary based on your provider's regional presence.
+
+The fix here is geography: terminate your audio in the same region as your STT/LLM/TTS. Co-located, you can shave 100–150ms off the round trip vs serving everything from one east-coast data center.
+
+## Adding up the budget
+
+For a tight voice agent build, the realistic median budget looks like:
+
+| Stage | Median |
+|---|---|
+| Endpointer delay | 300ms |
+| LLM TTFT | 250ms |
+| TTS TTFA | 150ms |
+| Network round-trip | 80ms |
+| **Total perceived latency** | **~780ms** |
+
+That's not bad — it's under the 1-second cliff and feels mostly natural. But "median" is the easy number. The story changes for the tails.
+
+## The p99 problem
+
+A 750ms median sounds great. A 750ms p99 is exceptional. Most voice agents have medians around 600ms but p99s in the 2–4 second range, and *that* is what makes the experience feel inconsistent.
+
+Where do the slow tails come from?
+
+- **Cold-start LLM endpoints.** Your provider scales down idle capacity; the next request waits for a new container.
+- **Long retrievals.** A RAG lookup against a 10M-doc knowledge base can take 800ms.
+- **Function call timeouts.** Your CRM lookup is normally 100ms, but every 100th request hits a slow database query and takes 3 seconds.
+- **Network jitter.** Audio packets arrive out of order; buffering kicks in.
+
+Fixing the median is straightforward; fixing the p99 is the discipline of running a real voice infrastructure. Strategies:
+
+- **Pre-warm endpoints.** Send a heartbeat ping every few seconds so the LLM container stays hot.
+- **Cap function calls at 500ms.** If they don't return, the agent says "let me check on that" and tries again in the background.
+- **Cache aggressively.** Repeated CRM lookups can be cached for the duration of a call.
+- **Choose providers with strong p99 SLAs.** Hosted LLMs differ wildly here. Some publish their p99 numbers; most don't.
+
+## How latency interacts with quality
+
+There's an underappreciated trade-off: making your agent faster sometimes makes it dumber.
+
+- A bigger LLM is slower but better at reasoning.
+- A more permissive endpointer is faster but jumps in early.
+- Streaming TTS sounds slightly less consistent than buffered TTS because pacing decisions get made before the full sentence is known.
+
+The right answer depends on the use case. A booking agent that just needs to confirm an appointment can be ruthless about speed. A discovery sales call where the agent is trying to qualify and persuade can afford to be 200ms slower if it improves the quality of the response.
+
+We have a piece on [why smaller LLMs often win for voice agents](/resources/why-smaller-llms-often-win-for-voice-agents) that explores this trade-off in depth.
+
+## What "fast" looks like in 2026
+
+The leaders in voice AI today are running median latencies of 350–500ms with p99s under 1.5 seconds. Two years ago that was unthinkable. Two years from now it'll be the floor.
+
+What's enabling the speedup:
+
+- **Streaming TTS at 100ms TTFA.** Cartesia, ElevenLabs Flash, and a couple of newer systems have collapsed this number.
+- **Smaller, faster LLMs that are good enough.** Llama 3.3 8B, Gemini Flash, GPT-4o-mini. The "good enough" bar got crossed for most voice agent tasks.
+- **Speculative decoding.** Run a draft model in parallel; verify with the big one. 2x speedup on TTFT for free.
+- **Endpointer improvements.** Learned endpointers with prosodic features cut endpointer delay from 600ms to 300ms.
+- **Edge-region serving.** Voice traffic now routes to GPUs in the caller's nearest data center.
+
+## Diagnosing slow voice agents
+
+When someone tells me their voice agent feels slow, here's the order I check:
+
+1. **What's the endpointer threshold?** If it's a flat 800ms silence timer, that's most of the problem.
+2. **Is TTS streaming?** If TTS waits for the full LLM reply, add 300–500ms to your budget.
+3. **What's the LLM TTFT?** Hit the model with a stopwatch; if it's >400ms, your model or your serving setup is the bottleneck.
+4. **Where are the audio paths?** If your telephony provider lives in one region and your inference in another, expect 100ms+ of avoidable network.
+5. **What's the p99?** If the median is fine but the experience is bad, you have a tail-latency problem, not a median-latency problem.
+
+For the full diagnostic flow, see [how to benchmark a voice agent's end-to-end latency](/resources/how-to-benchmark-a-voice-agents-end-to-end-latency).
+
+<SimbaCallout>
+SIMBA runs a streaming-everywhere pipeline with a learned endpointer and TTS time-to-first-audio under 200ms — designed so the median latency lands under 500ms out of the box, with monitoring on the p99.
+</SimbaCallout>
+
+## FAQ
+
+**Why is 500ms the magic number?**
+It's the threshold below which most listeners stop perceiving a delay. Above 500ms it starts to feel sluggish; above 1 second it feels broken. The 200–250ms human turn-taking gap is the floor, but 500ms is the practical "feels natural" target including endpointer delay.
+
+**Can I get latency lower with a faster phone connection?**
+Mostly no. Audio over a healthy PSTN or WebRTC connection adds 50–80ms each way. The remaining latency is in your software stack, not the network.
+
+**Does using a bigger LLM hurt latency much?**
+Yes — a 70B model has 2–3x the TTFT of an 8B model. For voice, the 8B model is almost always the right choice unless your use case genuinely needs the reasoning depth.
+
+**What about end-to-end audio models like GPT-4o's voice mode?**
+They reduce some pipeline overhead and can hit very low latencies. The trade-off is observability and control — you lose the ability to log transcripts, swap STT/TTS independently, and tune each layer.
+
+**How important is geographic co-location?**
+Significant for voice. Co-locating telephony, STT, LLM, and TTS in the same region cuts 80–150ms off the round trip. For a US-only agent, US-East is a sensible default.
+
+**Where do I see the worst tail latencies?**
+Cold-starts on hosted LLM endpoints during low-traffic hours, slow RAG retrievals against large indexes, and timeouts on legacy CRM APIs. These are operational problems, not modeling problems.

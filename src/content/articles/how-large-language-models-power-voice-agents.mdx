@@ -1,0 +1,178 @@
+---
+title: "How Large Language Models Power Voice Agents"
+slug: "how-large-language-models-power-voice-agents"
+---
+
+When people ask "what's inside a voice agent?" they usually want to hear about the LLM. That's fair — the LLM is the most visible new piece of the stack. It's the layer that does the actual reasoning, the part that makes the difference between an IVR that routes you and an agent that books your appointment. But there's a lot of confusion about what role the LLM is actually playing in a real-time conversation, and a lot of folklore about which model is "best."
+
+This piece is a working engineer's view of how LLMs fit into a production voice agent — what they do, what they don't do, what to optimize for, and where the model choice actually matters versus where it's a wash.
+
+## TL;DR
+
+- The LLM in a voice agent does three jobs: deciding what to say, deciding what to do, and deciding when to ask a clarifying question.
+- For voice, time-to-first-token (TTFT) matters more than total throughput. Sub-300ms TTFT is the bar.
+- Bigger models aren't always better. The sweet spot for most voice agents in 2026 is a fast, mid-sized model (8–14B parameters) with a tight system prompt.
+- Function calling is the most important LLM feature for voice agents, full stop. Everything else is secondary.
+- The model picks the words but the system prompt picks the personality, the tools, and the policies.
+
+## What the LLM is actually doing on every turn
+
+A turn in a voice conversation looks like this from the LLM's perspective:
+
+1. Receive the system prompt (your agent's personality, rules, and tool schemas).
+2. Receive the running transcript so far.
+3. Receive any retrieved knowledge for this turn (RAG).
+4. Decide one of three things:
+   - Speak a reply.
+   - Call a function (e.g., `lookup_patient`, `book_appointment`).
+   - Ask a clarifying question.
+5. Stream the chosen output token by token.
+
+The model is *not* doing any of the audio handling, the endpointing, the TTS, or the function execution itself. It's a text-in, text-out function. Everything around it is your orchestration layer's job.
+
+This is important because most teams burn time obsessing over which LLM to pick when the bigger lever is how the orchestration layer feeds the LLM. A weak prompt with a great LLM produces worse results than a great prompt with a weaker LLM.
+
+## The three things the LLM has to be good at
+
+For voice specifically, the model needs to nail three things. In order of importance:
+
+### 1. Following instructions tightly
+
+You will write a system prompt with rules like:
+
+- "Never quote a price unless you've confirmed it via the `get_pricing` tool."
+- "If the caller asks to be transferred, immediately call `transfer_to_human` instead of trying to handle it yourself."
+- "Speak in short sentences. Never read a list of more than three items aloud."
+
+The model has to follow these rules consistently across hundreds of turns and thousands of calls. This is one of the few places where the difference between models is large and obvious. GPT-4o, Claude Sonnet, and Gemini 2.0 Flash are all very strong here. Open-source models in the 8–14B range have improved a lot but still drift more often.
+
+### 2. Calling functions reliably
+
+When the agent needs to look up an account, book a meeting, or escalate to a human, it does that through function calling. The LLM emits a structured tool call and your orchestration layer executes it.
+
+Function-calling reliability comes down to:
+- Whether the model picks the right tool.
+- Whether it fills in the parameters correctly.
+- Whether it knows when *not* to call a tool (e.g., the caller is just venting; no action needed).
+
+Modern hosted models do this very well. Smaller open-source models can do it but require more careful prompt engineering. We have a deeper piece on [function calling for voice agents: a practical guide](/resources/function-calling-for-voice-agents-a-practical-guide).
+
+### 3. Speaking naturally for voice
+
+Voice prose is different from chat prose. No headers. No bullet points. No emoji. Short sentences. Avoiding constructions that work in writing but trip on the ear ("the most cost-effective option, given the parameters you've mentioned, would be…" — fine in text, awful in speech).
+
+This is partly a model property (some models default to a more conversational register) and mostly a system-prompt property. You explicitly tell the model "speak like a friendly person on the phone, not like a textbook."
+
+## Why bigger models often lose for voice
+
+There's a common assumption that the biggest model wins. For voice, this is usually wrong. Here's why:
+
+- **Latency.** A 70B model has roughly 2–3x the TTFT of an 8B model. In a voice conversation, every 100ms of latency is felt directly. A 200ms TTFT win is worth more than a marginal quality win.
+- **Cost.** Voice is high-volume. A million minutes of agent calls at $0.01/minute LLM cost is $10,000. At $0.05/minute it's $50,000. The math compounds.
+- **Diminishing returns.** The reasoning depth advantage of a frontier model only matters when the task is genuinely complex. Most voice agent turns are not complex — "book me at 3pm tomorrow" doesn't benefit from a 70B model's chain-of-thought.
+
+The right default for most production voice agents in 2026 is a fast mid-sized model: GPT-4o-mini, Claude Haiku, Gemini Flash, or a tuned 8B open-source model. Save the frontier model for the hard escalations.
+
+We dig into this in [why smaller LLMs often win for voice agents](/resources/why-smaller-llms-often-win-for-voice-agents).
+
+## What goes into the prompt
+
+A production system prompt for a voice agent has roughly six sections:
+
+**1. Identity and tone.**
+Who is the agent, what company, what role, what voice. ("You are Maya, the receptionist at Cornerstone Dental. Speak warmly but efficiently.")
+
+**2. Goals.**
+The single most important sentence: what is this call *for*? ("Your job is to book new-patient appointments, reschedule existing ones, and answer simple questions about insurance acceptance.")
+
+**3. Tools.**
+Every function the agent can call, with clear descriptions. The descriptions matter as much as the names — they're what the model uses to decide when to call each tool.
+
+**4. Rules and guardrails.**
+Hard rules about what not to do. ("Never quote a price. Never agree to a refund. If the caller asks for the doctor's home phone, decline politely.")
+
+**5. Voice-specific style guide.**
+"Use short sentences. Never read more than three items as a list. Spell out numbers digit by digit when confirming an appointment time. If you need more than two seconds to look something up, say 'one moment' first.")
+
+**6. Escalation policy.**
+When and how to hand off to a human. ("If the caller becomes frustrated, mentions a complaint, or asks for a manager, call `transfer_to_human` immediately.")
+
+The whole thing usually fits in 800–2,000 tokens. Much longer and you're paying TTFT cost on every turn for prompt content the model doesn't need.
+
+There's a whole craft here. We have [designing system prompts for multi-turn voice conversations](/resources/designing-system-prompts-for-multi-turn-voice-conversations) on the deeper version.
+
+## Memory and context across a call
+
+Within a single 8-minute call, the model accumulates a transcript. By turn 30, the prompt has the system prompt + 30 turns of dialogue + retrieved context. Two issues come up:
+
+**Token bloat.** A long call can blow past your model's effective context window or, more commonly, push your input-token costs up enough to matter at scale.
+
+**Recency bias.** Models attend more strongly to recent context. A constraint mentioned 25 turns ago can fall off the model's effective attention.
+
+Common fixes:
+
+- **Sliding window.** Keep the last N turns verbatim; summarize older turns into a condensed memory line.
+- **Periodic summarization.** Every 10 turns, the orchestration layer asks the model to write a "memory" summary that gets prepended to future turns.
+- **Structured state.** Track key facts (caller name, account number, intent) as explicit slots in your orchestration layer. Inject them into the prompt rather than relying on the model to remember.
+
+For a deeper take, see [how to give a voice agent long-term memory](/resources/how-to-give-a-voice-agent-long-term-memory).
+
+## RAG: when to retrieve
+
+Retrieval-augmented generation (RAG) is when you fetch relevant docs from a knowledge base and stick them in the prompt so the model can answer with grounded information.
+
+For voice agents, RAG is useful for:
+- Policy questions ("what's your return window?")
+- Product details ("does the X300 come in green?")
+- Account-specific lookups ("what's the status of order #4521?")
+
+It's *not* useful for:
+- Conversational filler ("how are you today?")
+- Tool calls (the function call itself is the grounding)
+- Things the model already knows reliably (basic math, common knowledge)
+
+The trick is to retrieve only when needed. Naive implementations run RAG on every turn and add 200–500ms of avoidable latency. Smart implementations gate retrieval on the LLM's own decision: "Does this turn need a knowledge lookup? If so, call `search_knowledge`; if not, just reply."
+
+We have a piece on [retrieval-augmented generation for voice agents](/resources/retrieval-augmented-generation-for-voice-agents) for the implementation details.
+
+## The model picks the words; the orchestration picks the agent
+
+A persistent trap: thinking the model "is" your agent. It isn't. Your agent is the *system* — the prompt, the tools, the retrieval, the guardrails, the post-call processing, the eval harness. The model is one component.
+
+This matters when you're picking models. The right question isn't "is GPT-4o better than Claude Sonnet?" It's "which model best serves my agent given my prompt, my tools, and my latency budget?" The answer is sometimes the cheapest fast model. Sometimes the most expensive frontier model. Almost never the same answer across different agents.
+
+It also means that swapping models is usually safe and underrated. Your prompt doesn't need to be rewritten end-to-end for a new model — most of the prompt is universal. Pin a few evals, test the candidate, swap if it wins on your metric.
+
+## What the future looks like
+
+Three predictions for how LLMs change voice agents over the next two years:
+
+**Models get faster, not necessarily smarter.** The frontier of useful improvement for voice is in TTFT, not raw IQ. Expect 100ms TTFT mid-size models by mid-2027.
+
+**Voice-specific tuning becomes a thing.** A handful of teams are training LLMs specifically on conversation transcripts (vs general internet text). Early results suggest 10–20% better turn-handling and more natural pacing. Expect this to become mainstream.
+
+**Agents become multi-model.** The orchestration layer routes different turn types to different models — a fast 3B model for greetings, a 14B model for complex turns, a frontier model for ambiguity. Already happening behind the scenes; about to become explicit.
+
+<SimbaCallout>
+SIMBA defaults to a fast mid-size model with sub-300ms TTFT and lets you swap models or set per-turn routing without rewriting your prompts.
+</SimbaCallout>
+
+## FAQ
+
+**Which LLM should I use for a voice agent?**
+For most agents in 2026, a fast mid-sized model: GPT-4o-mini, Claude Haiku, Gemini 2.0 Flash, or a tuned Llama 3.3 8B. Pick based on TTFT in your region and your function-calling needs. Test on your real prompts before committing.
+
+**Can I run my own LLM on-prem?**
+Yes. Llama 3.3 8B/70B on a single A100/H100 covers most production needs. Operationally heavier than hosted, but worth it if you have HIPAA, sovereignty, or cost reasons.
+
+**Do I need a fine-tuned model?**
+Almost never for the voice layer specifically. Fine-tuning helps for narrow domains (legal, medical) but most voice agents do fine with a strong general model and a tight prompt.
+
+**What's prompt caching and does it help voice?**
+Prompt caching lets the model reuse computation on the static portion of your prompt (system instructions). For voice it cuts TTFT by 50–100ms because you're not re-processing the system prompt every turn. Most major hosted models support it now. Use it.
+
+**How do I evaluate which model is better for my use case?**
+Pick 50 real call transcripts. Replay each one through both candidate models. Score the resulting turns on a rubric (correctness, tone, function-calling, latency). The model that wins on your data wins, regardless of leaderboards.
+
+**Can the model handle multiple languages?**
+Yes — frontier models cover 30+ languages well. The harder problem is your prompt: you typically need a separate prompt per language to nail the voice style.

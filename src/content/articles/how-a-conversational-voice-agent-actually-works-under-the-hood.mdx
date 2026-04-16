@@ -1,0 +1,137 @@
+---
+title: "How a Conversational Voice Agent Actually Works (Under the Hood)"
+slug: "how-a-conversational-voice-agent-actually-works-under-the-hood"
+---
+
+If you open the box on a modern voice agent, you'll find roughly four moving parts: a streaming speech recognizer, a language model, a text-to-speech engine, and a turn-taking referee that decides whose turn it is to speak. None of that is exotic on its own. The interesting engineering is in how those pieces are stitched together so the conversation feels alive instead of clunky.
+
+I want to walk through what's actually happening when you call a voice agent and say "hi." Not the marketing-deck version. The one where you can see why some implementations land at 350ms round-trip latency and others sit at 1.5 seconds and feel broken.
+
+## TL;DR
+
+- Four layers: STT (speech to text), an LLM (the reasoning), TTS (text to speech), and a turn-taking layer that gates them all.
+- Latency is not one number; it's a stack of overlapping stages, each of which can be partially hidden by streaming.
+- The cheapest wins come from streaming everything and starting work before the previous stage finishes.
+- The expensive wins come from picking the right model for each layer and tuning their interfaces.
+- Turn-taking is what separates a real conversation from a walkie-talkie.
+
+## The frame: a single back-and-forth
+
+Imagine the simplest possible exchange. The caller says "I'd like to reschedule my appointment." The agent says "Sure — for what date?"
+
+Between those two sentences, here's what the system does:
+
+1. Audio frames stream in (typically every 20ms).
+2. The STT model digests the frames and returns partial transcripts every 50–100ms ("I'd…", "I'd like…", "I'd like to res…").
+3. A voice activity detector (VAD) watches the audio for silence.
+4. A small "endpointer" model decides when the caller is *probably* done speaking — not just paused, actually done.
+5. The final transcript gets sent to the LLM.
+6. The LLM streams its response token by token.
+7. As soon as the first sentence (or even first phrase) of tokens lands, TTS starts synthesizing audio.
+8. Audio frames stream back out to the caller.
+9. While the caller listens, the system stays alert for a barge-in (the caller starting to talk over the agent).
+
+In a well-tuned system, steps 5 through 7 are happening in parallel. The model isn't waiting for STT to "finish." TTS isn't waiting for the model to "finish." Everything is pipelined. That's why a 500ms median round-trip is achievable even though the individual stages add up to more than 500ms on paper.
+
+## Layer 1: streaming STT
+
+Speech recognition has been around forever. The relevant variant for voice agents is *streaming* STT — a model that reads incoming audio chunks and emits partial hypotheses continuously, revising as more context arrives. Whisper is the famous one but isn't great in streaming mode. Deepgram, AssemblyAI, Speechmatics, and Cartesia all have purpose-built streaming endpoints. Some teams roll their own with NVIDIA NeMo or wav2vec2 derivatives.
+
+What you care about as an operator:
+
+- **Word Error Rate (WER)** on conversational audio close to your domain. A model that scores 4% on news broadcasts can land at 12% on noisy phone calls with strong accents. Always test on *your* audio.
+- **Latency to first partial.** You want the first token in under 200ms.
+- **Endpointing.** Some STT systems give you VAD events; others leave it to you. Ours [piece on voice activity detection](/resources/voice-activity-detection-in-production-voice-agents) goes deeper.
+
+A common mistake is treating STT as a black box. It isn't. You can bias it toward your domain with custom vocabularies — drug names, account number formats, your product names. A pharmacy agent that knows "metformin" exists will recognize it; one that doesn't will hear "met form in" and the rest of the call falls apart.
+
+## Layer 2: the LLM
+
+This is where most people imagine the magic happens. In practice it's the most boring layer in some ways — it's a function call. You hand the model the system prompt, the running transcript, and the function schemas. It hands you back text and possibly a function call.
+
+What's *not* boring is everything around the call:
+
+- **System prompt design.** Voice prompts look different from chatbot prompts. They're shorter (every word is latency), more terse on phrasing rules ("never read a list of more than three items aloud"), and explicit about turn-taking ("if you're going to take more than two seconds to look something up, say 'one moment' first").
+- **Function calling.** The model needs schemas for every business action — `lookup_patient_by_phone`, `book_appointment`, `transfer_to_human`. The quality of these schemas — names, descriptions, parameter types — matters more than people expect. We cover this in [function calling for voice agents: a practical guide](/resources/function-calling-for-voice-agents-a-practical-guide).
+- **Memory.** Even within a single call, you have to decide what context to keep. A 12-minute call easily blows past a small context window if you're not careful. Most teams use a sliding window plus a periodic summarizer.
+
+The LLM choice itself matters less than people think for latency-bound voice agents. Once you're inside the "good enough at conversation" club (Llama 3.3, GPT-4o, Claude Haiku/Sonnet, Gemini Flash, etc.), the differences are mostly margin. The bigger lever is whether you can get the model to consistently respond in 200–400ms.
+
+## Layer 3: streaming TTS
+
+The voice. In 2026, you have ElevenLabs, OpenAI's TTS, Cartesia, PlayHT, and a few open-source models like StyleTTS2 and XTTS. Quality differences are real but small. Latency differences are large.
+
+The single most important property: **time to first audio**. From the moment you send the first token to the moment a chunk of audio is ready to play. ElevenLabs Flash and Cartesia Sonic land under 200ms; older neural TTS systems sit at 600–800ms.
+
+The trick that makes the whole pipeline fast is *streaming TTS*. As soon as the LLM emits a phrase ("Sure — for what date?"), TTS starts synthesizing. You don't wait for the full sentence. You don't even wait for the LLM to finish thinking. The first audio chunk is on the wire before the LLM has thought of its second sentence.
+
+For more on the latency engineering side, our [latency engineering for real-time voice agents](/resources/latency-engineering-for-real-time-voice-agents) piece has the full math.
+
+## Layer 4: the turn-taking referee
+
+This is the layer most people don't think about until their agent is shipping and they realize it sounds like a 1990s answering machine.
+
+Turn-taking is the question: **who has the floor right now?** A robust voice agent has to handle four cases:
+
+1. **Caller speaks; agent listens.** The default state.
+2. **Caller stops; agent should reply.** The endpointer fires and the LLM starts thinking.
+3. **Caller pauses but isn't done.** The endpointer must *not* fire prematurely. If it does, the agent will jump in and step on the caller mid-thought.
+4. **Caller barges in while agent is talking.** The agent must immediately stop talking, flush its audio buffer, and re-listen.
+
+Each of these has a real implementation. VAD is the simplest signal — silence detection. Endpointing is a learned model that combines VAD with prosodic features (sentence-final intonation, lexical completeness). Barge-in detection runs on a separate listener that watches the input audio even while the agent is talking.
+
+Most production agents fail at turn-taking long before they fail at understanding. That's why we wrote a whole piece on [how voice agents handle interruptions gracefully](/resources/how-voice-agents-handle-interruptions-gracefully).
+
+## Putting it together: the latency budget
+
+A typical end-to-end "median" budget for a snappy voice agent looks like:
+
+| Stage | Time | Hideable? |
+|---|---|---|
+| Audio frame arrives at server | 20–60ms (network) | No |
+| STT first partial | 100–200ms | Yes (overlaps with caller still speaking) |
+| Endpointer decides "done" | 200–500ms after silence | Partially (with a smart endpointer) |
+| LLM time-to-first-token | 150–400ms | Yes (overlaps with TTS) |
+| TTS time-to-first-audio | 100–300ms | Yes (overlaps with LLM streaming) |
+| Audio first packet back to caller | 20–60ms (network) | No |
+
+If you add the worst case of every row, you get well over 1.5 seconds. But because you can pipeline most of it, the *perceived* round-trip time is closer to:
+
+`endpoint detection delay + LLM time-to-first-token + TTS time-to-first-audio + network`
+
+…which lands at 350–700ms in a tight build, depending on which models you picked and how much overlap you achieve.
+
+## What separates great voice agents from mediocre ones
+
+Five things, in order of how often they're underestimated:
+
+**1. Endpointing quality.** A bad endpointer ruins everything. The agent either jumps in early ("Wait, I wasn't finished —") or sits in awkward silence after the caller is clearly done.
+
+**2. Function-calling reliability.** When the agent decides it needs to look up the caller's account, that lookup needs to succeed 99%+ of the time. Anything less and you're constantly papering over failures.
+
+**3. The system prompt.** This sounds soft but it's the single most-iterated artifact in any production voice agent. Tight, explicit, full of examples. There's a reason we have a whole piece on [designing system prompts for multi-turn voice conversations](/resources/designing-system-prompts-for-multi-turn-voice-conversations).
+
+**4. Evaluations.** You need a way to grade calls. Real calls. Yesterday's. Today's. Every day. Without an eval harness you're flying blind. See [how to A/B test voice agent prompts](/resources/how-to-a-b-test-voice-agent-prompts).
+
+**5. Operational maturity.** A voice agent is a contact center. It has volume spikes, peak hours, regional patterns, holiday quirks. Treating it like a SaaS feature instead of a contact center is the most common reason pilots stall.
+
+<SimbaCallout>
+SIMBA wires the four layers together for you with sensible defaults: streaming STT, low-latency neural TTS, a tuned endpointer, and a function-calling layer that connects to your existing scheduling and CRM systems. The point of the platform is that you spend your time on prompt design and operations, not on plumbing.
+</SimbaCallout>
+
+## FAQ
+
+**What's the difference between STT and ASR?**
+They're effectively synonyms. ASR ("automatic speech recognition") is the older academic term; STT ("speech to text") is the term most product teams use today. Same idea: audio in, text out.
+
+**Why not use one big multimodal model that does audio in and audio out?**
+You can — GPT-4o's audio mode and several others go this route. The trade-off is control and observability. With a separate STT/LLM/TTS pipeline you can swap any layer independently, log the transcript, route different conversations to different models, and bias the STT vocabulary. End-to-end audio models are simpler but harder to operate.
+
+**How much does each component contribute to total latency?**
+Roughly: endpointer 200–500ms (the biggest single chunk, and it's *required* — you have to wait for the caller to finish), LLM 150–400ms time-to-first-token, TTS 100–300ms time-to-first-audio, network 50–150ms. The numbers are not additive in the optimistic case because of streaming.
+
+**Is GPU inference required for production?**
+For TTS and STT, almost always yes. Some smaller LLMs run well on CPU but the latency tax usually isn't worth it. Most teams in 2026 use hosted LLM APIs and hosted TTS/STT, which removes the GPU operational headache entirely.
+
+**Can I run this on-prem?**
+Yes, and increasingly people do — for HIPAA, PCI, or sovereignty reasons. The whole stack (open-source STT, on-prem Llama, open-source TTS) is technically possible, though the operational lift is real.

@@ -32,6 +32,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/agents/trust-and-reliability`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/agents/integrations`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/agents/forward-deployed-engineers`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+
+    // Legal
+    { url: `${BASE}/privacy`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE}/terms`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
   ];
 
   // Resources hub + index

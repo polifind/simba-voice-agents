@@ -78,6 +78,9 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.webmanifest',
   category: 'technology',
+  verification: {
+    google: 'Gyh-svgmQuvupb4BgwuzjJokg8QLbJfZYqAhqXDclB0',
+  },
 };
 
 export const viewport: Viewport = {
