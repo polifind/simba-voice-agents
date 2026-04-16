@@ -9,7 +9,7 @@ export const aiVirtualReceptionistData: PageData = {
   hero: {
     headline: 'AI virtual receptionist — answer every call, 24/7',
     subheadline: 'From call answering and appointment scheduling to visitor routing, intake capture, and after-hours coverage, our virtual receptionists automate front-desk workflows across every industry without sacrificing caller experience.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],

@@ -9,7 +9,7 @@ export const agentsTechnologyData: PageData = {
   hero: {
     headline: 'AI agents for technology companies',
     subheadline: 'From customer support and onboarding to lead qualification, outbound sales, and scheduling automation, SIMBA Agents handles the conversations that drive resolution, revenue, and retention.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],
@@ -72,7 +72,7 @@ export const agentsTechnologyData: PageData = {
     webOption: {
       title: 'Build on the web',
       description: 'Upload your SOPs, knowledge base, and support scripts. Build and deploy agents without writing code.',
-      ctas: [{ label: 'Sign Up', href: '/get-started', variant: 'primary' as const }],
+      ctas: [{ label: 'Sign Up', href: '/login', variant: 'primary' as const }],
     },
     apiOption: {
       title: 'Build via APIs and SDKs',

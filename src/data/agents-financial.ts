@@ -9,7 +9,7 @@ export const agentsFinancialData: PageData = {
   hero: {
     headline: 'AI agents for financial services',
     subheadline: 'From account inquiries and loan origination to claims processing, collections, and compliance verification, our AI agents automate customer and advisor workflows without sacrificing financial trust.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],

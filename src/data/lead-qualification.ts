@@ -9,7 +9,7 @@ export const leadQualificationData: PageData = {
   hero: {
     headline: 'AI agents for lead qualification',
     subheadline: 'From inbound screening and lead scoring to meeting scheduling and follow-up outreach, our AI agents automate sales development workflows without sacrificing conversion quality.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],

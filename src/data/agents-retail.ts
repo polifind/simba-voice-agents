@@ -9,7 +9,7 @@ export const agentsRetailData: PageData = {
   hero: {
     headline: 'AI agents for retail and e-commerce',
     subheadline: 'From product recommendations and cart recovery to order support and returns, our AI agents drive better customer experiences and higher LTV without adding headcount.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],
@@ -68,7 +68,7 @@ export const agentsRetailData: PageData = {
     webOption: {
       title: 'Build from your catalog',
       description: 'Connect your product catalog, upload SOPs, and build shopping agents in minutes. No coding required.',
-      ctas: [{ label: 'Sign Up', href: '/get-started', variant: 'primary' as const }],
+      ctas: [{ label: 'Sign Up', href: '/login', variant: 'primary' as const }],
     },
     apiOption: {
       title: 'Embed via API',

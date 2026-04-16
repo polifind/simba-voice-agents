@@ -66,7 +66,7 @@ export const gettingStartedDefault = {
   webOption: {
     title: 'Create an agent on the web',
     description: 'Set up your first AI agent in just a few minutes using our web platform. Upload your SOPs, knowledge base, and configure workflows — no coding required.',
-    ctas: [{ label: 'Sign Up', href: '/get-started', variant: 'primary' as const }],
+    ctas: [{ label: 'Sign Up', href: '/login', variant: 'primary' as const }],
   },
   apiOption: {
     title: 'Build via API',

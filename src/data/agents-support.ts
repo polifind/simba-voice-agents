@@ -9,7 +9,7 @@ export const agentsSupportData: PageData = {
   hero: {
     headline: 'SIMBA Agents for Support',
     subheadline: 'Always-on, emotionally aware conversational AI agents that de-escalate issues, build trust, and resolve tickets faster across voice and digital channels in 70+ languages.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],
@@ -77,7 +77,7 @@ export const agentsSupportData: PageData = {
     webOption: {
       title: 'Create a Support Agent',
       description: 'Set up your first support agent in just a few minutes using our web platform. No coding required.',
-      ctas: [{ label: 'Sign Up', href: '/get-started', variant: 'primary' as const }],
+      ctas: [{ label: 'Sign Up', href: '/login', variant: 'primary' as const }],
     },
     apiOption: {
       title: 'Agent APIs',

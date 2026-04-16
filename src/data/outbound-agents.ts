@@ -9,7 +9,7 @@ export const outboundAgentsData: PageData = {
   hero: {
     headline: 'Outbound AI Agents for sales and collections',
     subheadline: 'Automate human-like outbound calling and lead generation to raise conversion, cut CPL, and keep audit-ready controls. Pair realistic voice, deterministic workflows, and CRM integration.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],

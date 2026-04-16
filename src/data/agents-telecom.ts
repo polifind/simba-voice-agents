@@ -9,7 +9,7 @@ export const agentsTelecomData: PageData = {
   hero: {
     headline: 'AI agents for telecommunications',
     subheadline: 'From billing inquiries and network troubleshooting to outage alerts and subscriber retention, our AI agents automate telecom customer workflows without sacrificing service quality.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],

@@ -9,7 +9,7 @@ export const agentsHealthcareData: PageData = {
   hero: {
     headline: 'AI agents for healthcare',
     subheadline: 'From inquiries and scheduling to triage, follow-up, and prescription management, our AI agents automate patient and provider workflows without sacrificing care quality.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],
@@ -80,7 +80,7 @@ export const agentsHealthcareData: PageData = {
     webOption: {
       title: 'Start on the web',
       description: 'Create a clinic or dental agent from templates, upload SOPs, and test simulated patient flows in minutes.',
-      ctas: [{ label: 'Sign Up', href: '/get-started', variant: 'primary' as const }],
+      ctas: [{ label: 'Sign Up', href: '/login', variant: 'primary' as const }],
     },
     apiOption: {
       title: 'Build via API',

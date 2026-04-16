@@ -9,7 +9,7 @@ export const agentsGovernmentData: PageData = {
   hero: {
     headline: 'AI agents for government',
     subheadline: 'From resident inquiries and benefits navigation to crisis hotlines, permit guidance, and multilingual outreach, our AI agents automate citizen and staff workflows without sacrificing public trust.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],
@@ -76,7 +76,7 @@ export const agentsGovernmentData: PageData = {
     webOption: {
       title: 'Build on the web',
       description: 'Create agents from your SOPs and policy documents. No coding required.',
-      ctas: [{ label: 'Sign Up', href: '/get-started', variant: 'primary' as const }],
+      ctas: [{ label: 'Sign Up', href: '/login', variant: 'primary' as const }],
     },
     apiOption: {
       title: 'Integrate via API',

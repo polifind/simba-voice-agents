@@ -47,7 +47,7 @@ export function Footer() {
               Talk to Sales
             </Link>
             <Link
-              href="/get-started"
+              href="/login"
               className="inline-flex items-center justify-center rounded-full bg-simba-blue px-6 py-3 text-base font-semibold text-white hover:bg-simba-blue-dark transition-colors shadow-lg shadow-simba-blue/25"
             >
               Create an AI Agent

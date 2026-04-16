@@ -9,7 +9,7 @@ export const supportData: PageData = {
   hero: {
     headline: 'AI Support Agents for Customer Service',
     subheadline: 'Build enterprise-ready AI agents with support for SOPs, authentication, system actions, and contextual escalation. We deliver human-like support — cutting response time, costs, and raising satisfaction from day one.',
-    primaryCTA: { label: 'Create an Agent', href: '/get-started' },
+    primaryCTA: { label: 'Create an Agent', href: '/login' },
     secondaryCTA: { label: 'Talk to Sales', href: '/contact' },
   },
   logos: [],

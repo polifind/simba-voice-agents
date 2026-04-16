@@ -22,7 +22,7 @@ const plans = [
       'Web chat deployment',
       'Basic analytics',
     ],
-    cta: { label: 'Get Started Free', href: '/get-started', variant: 'secondary' as const },
+    cta: { label: 'Get Started Free', href: '/login', variant: 'secondary' as const },
   },
   {
     name: 'Starter',
@@ -38,7 +38,7 @@ const plans = [
       'Custom knowledge base',
       'Basic integrations',
     ],
-    cta: { label: 'Get Started', href: '/get-started', variant: 'primary' as const },
+    cta: { label: 'Get Started', href: '/login', variant: 'primary' as const },
   },
   {
     name: 'Scale',
@@ -58,7 +58,7 @@ const plans = [
       'Multi-agent workflows',
       'API access',
     ],
-    cta: { label: 'Get Started', href: '/get-started', variant: 'primary' as const },
+    cta: { label: 'Get Started', href: '/login', variant: 'primary' as const },
   },
   {
     name: 'Business',
@@ -79,7 +79,7 @@ const plans = [
       'Team permissions',
       'SSO/SAML',
     ],
-    cta: { label: 'Get Started', href: '/get-started', variant: 'primary' as const },
+    cta: { label: 'Get Started', href: '/login', variant: 'primary' as const },
   },
 ];
 
