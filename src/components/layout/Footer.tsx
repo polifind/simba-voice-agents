@@ -1,5 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { SimbaLogoWhite } from '@/components/brand/SimbaLogo';
+
+// Routes where the marketing footer should NOT render
+const APP_ROUTES = ['/dashboard', '/login', '/signup'];
 
 const footerLinks = {
   'Platform': [
@@ -24,15 +30,19 @@ const footerLinks = {
     { name: 'AI Receptionist', href: '/ai-virtual-receptionist' },
   ],
   'Resources': [
-    { name: 'Documentation', href: '#' },
-    { name: 'API Reference', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Customer Stories', href: '#' },
+    { name: 'Resources Hub', href: '/resources' },
+    { name: 'All Articles', href: '/resources/all' },
+    { name: 'Voice AI Fundamentals', href: '/resources/topic/voice-ai-fundamentals' },
+    { name: 'Customer Support Automation', href: '/resources/topic/customer-support' },
     { name: 'Contact Sales', href: '/contact' },
   ],
 };
 
 export function Footer() {
+  const pathname = usePathname();
+  if (APP_ROUTES.some((r) => pathname === r || pathname.startsWith(r + '/'))) {
+    return null;
+  }
   return (
     <footer className="bg-simba-black text-white">
       {/* CTA Banner */}

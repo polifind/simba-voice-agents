@@ -1,0 +1,2254 @@
+[
+  {
+    "slug": "why-voice-will-be-the-default-ux-for-enterprise-ai",
+    "title": "Why Voice Will Be the Default UX for Enterprise AI",
+    "description": "Why Voice Will Be the Default UX for Enterprise AI",
+    "excerpt": "Why Voice Will Be the Default UX for Enterprise AI. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-04-15T10:13:00.000Z"
+  },
+  {
+    "slug": "the-economics-of-ai-voice-agents-at-scale",
+    "title": "The Economics of AI Voice Agents at Scale",
+    "description": "The Economics of AI Voice Agents at Scale",
+    "excerpt": "The Economics of AI Voice Agents at Scale. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-04-14T14:59:00.000Z"
+  },
+  {
+    "slug": "what-decagon-sierra-and-fin-get-right-about-ai-support",
+    "title": "What Decagon, Sierra, and Fin Get Right About AI Support",
+    "description": "What Decagon, Sierra, and Fin Get Right About AI Support",
+    "excerpt": "What Decagon, Sierra, and Fin Get Right About AI Support. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-14T09:06:00.000Z"
+  },
+  {
+    "slug": "how-ai-voice-will-reshape-customer-service-jobs",
+    "title": "How AI Voice Will Reshape Customer Service Jobs",
+    "description": "How AI Voice Will Reshape Customer Service Jobs",
+    "excerpt": "How AI Voice Will Reshape Customer Service Jobs. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-04-13T13:52:00.000Z"
+  },
+  {
+    "slug": "voice-ai-trends-to-watch-in-2026-and-beyond",
+    "title": "Voice AI Trends to Watch in 2026 and Beyond",
+    "description": "Voice AI Trends to Watch in 2026 and Beyond",
+    "excerpt": "Voice AI Trends to Watch in 2026 and Beyond. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-04-13T12:45:00.000Z"
+  },
+  {
+    "slug": "open-source-vs-proprietary-voice-agent-stacks",
+    "title": "Open-Source vs Proprietary Voice Agent Stacks",
+    "description": "Open-Source vs Proprietary Voice Agent Stacks",
+    "excerpt": "Open-Source vs Proprietary Voice Agent Stacks. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-04-12T11:38:00.000Z"
+  },
+  {
+    "slug": "what-to-look-for-in-a-voice-agent-vendor",
+    "title": "What to Look for in a Voice Agent Vendor",
+    "description": "What to Look for in a Voice Agent Vendor",
+    "excerpt": "What to Look for in a Voice Agent Vendor. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-12T10:31:00.000Z"
+  },
+  {
+    "slug": "build-vs-buy-when-to-build-your-own-voice-agent",
+    "title": "Build vs Buy: When to Build Your Own Voice Agent",
+    "description": "Build vs Buy: When to Build Your Own Voice Agent",
+    "excerpt": "Build vs Buy: When to Build Your Own Voice Agent. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-04-11T14:17:00.000Z"
+  },
+  {
+    "slug": "voice-agent-pricing-models-compared",
+    "title": "Voice Agent Pricing Models Compared",
+    "description": "Voice Agent Pricing Models Compared",
+    "excerpt": "Voice Agent Pricing Models Compared. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-11T09:24:00.000Z"
+  },
+  {
+    "slug": "the-state-of-voice-ai-in-2026",
+    "title": "The State of Voice AI in 2026",
+    "description": "The State of Voice AI in 2026",
+    "excerpt": "The State of Voice AI in 2026. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-04-10T13:10:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "elevenlabs-vs-vapi-vs-retell-a-technical-comparison",
+    "title": "ElevenLabs vs Vapi vs Retell: A Technical Comparison",
+    "description": "ElevenLabs vs Vapi vs Retell: A Technical Comparison",
+    "excerpt": "ElevenLabs vs Vapi vs Retell: A Technical Comparison. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-04-10T12:03:00.000Z"
+  },
+  {
+    "slug": "choosing-a-voice-agent-platform-in-2026-a-buyers-guide",
+    "title": "Choosing a Voice Agent Platform in 2026: A Buyer's Guide",
+    "description": "Choosing a Voice Agent Platform in 2026: A Buyer's Guide",
+    "excerpt": "Choosing a Voice Agent Platform in 2026: A Buyer's Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "comparisons-trends",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-09T11:56:00.000Z",
+    "featured": true,
+    "pillar": true
+  },
+  {
+    "slug": "telco-bill-inquiries-an-ai-first-approach",
+    "title": "Telco Bill Inquiries: An AI-First Approach",
+    "description": "Telco Bill Inquiries: An AI-First Approach",
+    "excerpt": "Telco Bill Inquiries: An AI-First Approach. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-09T10:49:00.000Z"
+  },
+  {
+    "slug": "voice-ai-in-telecommunications",
+    "title": "Voice AI in Telecommunications",
+    "description": "Voice AI in Telecommunications",
+    "excerpt": "Voice AI in Telecommunications. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-08T14:35:00.000Z"
+  },
+  {
+    "slug": "network-outage-communications-via-voice-agents",
+    "title": "Network Outage Communications via Voice Agents",
+    "description": "Network Outage Communications via Voice Agents",
+    "excerpt": "Network Outage Communications via Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-08T09:42:00.000Z"
+  },
+  {
+    "slug": "onboarding-saas-customers-with-voice-agents",
+    "title": "Onboarding SaaS Customers with Voice Agents",
+    "description": "Onboarding SaaS Customers with Voice Agents",
+    "excerpt": "Onboarding SaaS Customers with Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-07T13:28:00.000Z"
+  },
+  {
+    "slug": "voice-agents-for-developer-support",
+    "title": "Voice Agents for Developer Support",
+    "description": "Voice Agents for Developer Support",
+    "excerpt": "Voice Agents for Developer Support. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-07T12:21:00.000Z"
+  },
+  {
+    "slug": "voice-ai-for-saas-companies",
+    "title": "Voice AI for SaaS Companies",
+    "description": "Voice AI for SaaS Companies",
+    "excerpt": "Voice AI for SaaS Companies. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-06T11:14:00.000Z"
+  },
+  {
+    "slug": "compliance-and-accessibility-for-government-voice-ai",
+    "title": "Compliance and Accessibility for Government Voice AI",
+    "description": "Compliance and Accessibility for Government Voice AI",
+    "excerpt": "Compliance and Accessibility for Government Voice AI. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-06T10:07:00.000Z"
+  },
+  {
+    "slug": "citizen-services-with-ai-voice-agents",
+    "title": "Citizen Services with AI Voice Agents",
+    "description": "Citizen Services with AI Voice Agents",
+    "excerpt": "Citizen Services with AI Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-05T09:00:00.000Z"
+  },
+  {
+    "slug": "voice-ai-for-government-agencies",
+    "title": "Voice AI for Government Agencies",
+    "description": "Voice AI for Government Agencies",
+    "excerpt": "Voice AI for Government Agencies. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-04T14:53:00.000Z"
+  },
+  {
+    "slug": "returns-and-refunds-via-voice-agent-a-playbook",
+    "title": "Returns and Refunds via Voice Agent: A Playbook",
+    "description": "Returns and Refunds via Voice Agent: A Playbook",
+    "excerpt": "Returns and Refunds via Voice Agent: A Playbook. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-04T13:46:00.000Z"
+  },
+  {
+    "slug": "order-status-voice-agents-the-quickest-e-commerce-win",
+    "title": "Order-Status Voice Agents: The Quickest E-commerce Win",
+    "description": "Order-Status Voice Agents: The Quickest E-commerce Win",
+    "excerpt": "Order-Status Voice Agents: The Quickest E-commerce Win. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-03T12:39:00.000Z"
+  },
+  {
+    "slug": "voice-ai-for-retail-and-e-commerce",
+    "title": "Voice AI for Retail and E-commerce",
+    "description": "Voice AI for Retail and E-commerce",
+    "excerpt": "Voice AI for Retail and E-commerce. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-03T11:32:00.000Z"
+  },
+  {
+    "slug": "voice-agents-for-loan-servicing-and-collections",
+    "title": "Voice Agents for Loan Servicing and Collections",
+    "description": "Voice Agents for Loan Servicing and Collections",
+    "excerpt": "Voice Agents for Loan Servicing and Collections. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "compliance",
+      "tcpa"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-02T10:25:00.000Z"
+  },
+  {
+    "slug": "compliance-considerations-for-ai-voice-in-banking",
+    "title": "Compliance Considerations for AI Voice in Banking",
+    "description": "Compliance Considerations for AI Voice in Banking",
+    "excerpt": "Compliance Considerations for AI Voice in Banking. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "compliance",
+      "pci"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-02T09:18:00.000Z"
+  },
+  {
+    "slug": "voice-ai-in-financial-services-trends-and-use-cases",
+    "title": "Voice AI in Financial Services: Trends and Use Cases",
+    "description": "Voice AI in Financial Services: Trends and Use Cases",
+    "excerpt": "Voice AI in Financial Services: Trends and Use Cases. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-01T14:11:00.000Z"
+  },
+  {
+    "slug": "how-healthcare-providers-use-voice-agents-for-intake",
+    "title": "How Healthcare Providers Use Voice Agents for Intake",
+    "description": "How Healthcare Providers Use Voice Agents for Intake",
+    "excerpt": "How Healthcare Providers Use Voice Agents for Intake. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "hipaa"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-04-01T13:04:00.000Z"
+  },
+  {
+    "slug": "hipaa-compliance-for-ai-voice-agents-in-healthcare",
+    "title": "HIPAA Compliance for AI Voice Agents in Healthcare",
+    "description": "HIPAA Compliance for AI Voice Agents in Healthcare",
+    "excerpt": "HIPAA Compliance for AI Voice Agents in Healthcare. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "hipaa",
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-31T12:57:00.000Z"
+  },
+  {
+    "slug": "voice-ai-in-healthcare-a-2026-field-guide",
+    "title": "Voice AI in Healthcare: A 2026 Field Guide",
+    "description": "Voice AI in Healthcare: A 2026 Field Guide",
+    "excerpt": "Voice AI in Healthcare: A 2026 Field Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "industry",
+    "topics": [
+      "hipaa"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-31T11:50:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "how-to-integrate-voice-agents-with-a-custom-rest-api",
+    "title": "How to Integrate Voice Agents with a Custom REST API",
+    "description": "How to Integrate Voice Agents with a Custom REST API",
+    "excerpt": "How to Integrate Voice Agents with a Custom REST API. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "function-calling",
+      "webhooks"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-30T10:43:00.000Z"
+  },
+  {
+    "slug": "sending-voice-agent-transcripts-to-slack",
+    "title": "Sending Voice Agent Transcripts to Slack",
+    "description": "Sending Voice Agent Transcripts to Slack",
+    "excerpt": "Sending Voice Agent Transcripts to Slack. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "webhooks"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-30T09:36:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-agents-to-snowflake-or-bigquery",
+    "title": "Connecting Voice Agents to Snowflake or BigQuery",
+    "description": "Connecting Voice Agents to Snowflake or BigQuery",
+    "excerpt": "Connecting Voice Agents to Snowflake or BigQuery. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "analytics"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-29T14:29:00.000Z"
+  },
+  {
+    "slug": "how-to-port-a-phone-number-to-your-voice-agent",
+    "title": "How to Port a Phone Number to Your Voice Agent",
+    "description": "How to Port a Phone Number to Your Voice Agent",
+    "excerpt": "How to Port a Phone Number to Your Voice Agent. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-29T13:22:00.000Z"
+  },
+  {
+    "slug": "setting-up-toll-free-verification-for-ai-calling",
+    "title": "Setting Up Toll-Free Verification for AI Calling",
+    "description": "Setting Up Toll-Free Verification for AI Calling",
+    "excerpt": "Setting Up Toll-Free Verification for AI Calling. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-28T12:15:00.000Z"
+  },
+  {
+    "slug": "sip-vs-webrtc-for-voice-agents",
+    "title": "SIP vs WebRTC for Voice Agents",
+    "description": "SIP vs WebRTC for Voice Agents",
+    "excerpt": "SIP vs WebRTC for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "sip",
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-28T11:08:00.000Z"
+  },
+  {
+    "slug": "bring-your-own-twilio-pros-cons-and-setup",
+    "title": "Bring Your Own Twilio: Pros, Cons, and Setup",
+    "description": "Bring Your Own Twilio: Pros, Cons, and Setup",
+    "excerpt": "Bring Your Own Twilio: Pros, Cons, and Setup. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "twilio"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-27T10:01:00.000Z"
+  },
+  {
+    "slug": "how-to-use-twilio-studio-with-ai-voice-agents",
+    "title": "How to Use Twilio Studio with AI Voice Agents",
+    "description": "How to Use Twilio Studio with AI Voice Agents",
+    "excerpt": "How to Use Twilio Studio with AI Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "twilio"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-27T09:54:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-agents-to-stripe-for-payments",
+    "title": "Connecting Voice Agents to Stripe for Payments",
+    "description": "Connecting Voice Agents to Stripe for Payments",
+    "excerpt": "Connecting Voice Agents to Stripe for Payments. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "compliance",
+      "pci"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-26T14:47:00.000Z"
+  },
+  {
+    "slug": "sending-sms-follow-ups-from-voice-agents",
+    "title": "Sending SMS Follow-Ups from Voice Agents",
+    "description": "Sending SMS Follow-Ups from Voice Agents",
+    "excerpt": "Sending SMS Follow-Ups from Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-26T13:40:00.000Z"
+  },
+  {
+    "slug": "calendar-integrations-calcom-google-outlook",
+    "title": "Calendar Integrations: Cal.com, Google, Outlook",
+    "description": "Calendar Integrations: Cal.com, Google, Outlook",
+    "excerpt": "Calendar Integrations: Cal.com, Google, Outlook. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "function-calling"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-25T12:33:00.000Z"
+  },
+  {
+    "slug": "webhooks-101-for-voice-agents",
+    "title": "Webhooks 101 for Voice Agents",
+    "description": "Webhooks 101 for Voice Agents",
+    "excerpt": "Webhooks 101 for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "webhooks"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-24T11:26:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-agents-to-intercom",
+    "title": "Connecting Voice Agents to Intercom",
+    "description": "Connecting Voice Agents to Intercom",
+    "excerpt": "Connecting Voice Agents to Intercom. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "intercom"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-24T10:19:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-agents-to-hubspot-crm",
+    "title": "Connecting Voice Agents to HubSpot CRM",
+    "description": "Connecting Voice Agents to HubSpot CRM",
+    "excerpt": "Connecting Voice Agents to HubSpot CRM. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "hubspot",
+      "crm"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-23T14:05:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-agents-to-zendesk",
+    "title": "Connecting Voice Agents to Zendesk",
+    "description": "Connecting Voice Agents to Zendesk",
+    "excerpt": "Connecting Voice Agents to Zendesk. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "zendesk"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-23T09:12:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-agents-to-salesforce-crm",
+    "title": "Connecting Voice Agents to Salesforce CRM",
+    "description": "Connecting Voice Agents to Salesforce CRM",
+    "excerpt": "Connecting Voice Agents to Salesforce CRM. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "salesforce",
+      "crm"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-22T13:58:00.000Z"
+  },
+  {
+    "slug": "sip-trunking-101-for-voice-agent-builders",
+    "title": "SIP Trunking 101 for Voice Agent Builders",
+    "description": "SIP Trunking 101 for Voice Agent Builders",
+    "excerpt": "SIP Trunking 101 for Voice Agent Builders. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "sip",
+      "sip-trunk"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-22T12:51:00.000Z"
+  },
+  {
+    "slug": "twilio-voice-agents-a-complete-guide",
+    "title": "Twilio + Voice Agents: A Complete Guide",
+    "description": "Twilio + Voice Agents: A Complete Guide",
+    "excerpt": "Twilio + Voice Agents: A Complete Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "integrations-telephony",
+    "topics": [
+      "twilio"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-21T11:44:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "how-to-benchmark-a-voice-agents-end-to-end-latency",
+    "title": "How to Benchmark a Voice Agent's End-to-End Latency",
+    "description": "How to Benchmark a Voice Agent's End-to-End Latency",
+    "excerpt": "How to Benchmark a Voice Agent's End-to-End Latency. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "latency",
+      "evaluation"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-21T10:37:00.000Z"
+  },
+  {
+    "slug": "whisper-vs-deepgram-vs-elevenlabs-stt",
+    "title": "Whisper vs Deepgram vs ElevenLabs STT",
+    "description": "Whisper vs Deepgram vs ElevenLabs STT",
+    "excerpt": "Whisper vs Deepgram vs ElevenLabs STT. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-20T14:23:00.000Z"
+  },
+  {
+    "slug": "streaming-audio-over-webrtc-for-voice-agents",
+    "title": "Streaming Audio Over WebRTC for Voice Agents",
+    "description": "Streaming Audio Over WebRTC for Voice Agents",
+    "excerpt": "Streaming Audio Over WebRTC for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-20T09:30:00.000Z"
+  },
+  {
+    "slug": "comparing-neural-tts-architectures",
+    "title": "Comparing Neural TTS Architectures",
+    "description": "Comparing Neural TTS Architectures",
+    "excerpt": "Comparing Neural TTS Architectures. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-19T13:16:00.000Z"
+  },
+  {
+    "slug": "phoneme-level-tuning-for-voice-agents",
+    "title": "Phoneme-Level Tuning for Voice Agents",
+    "description": "Phoneme-Level Tuning for Voice Agents",
+    "excerpt": "Phoneme-Level Tuning for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-19T12:09:00.000Z"
+  },
+  {
+    "slug": "why-some-voices-sound-robotic-even-in-2026",
+    "title": "Why Some Voices Sound Robotic Even in 2026",
+    "description": "Why Some Voices Sound Robotic Even in 2026",
+    "excerpt": "Why Some Voices Sound Robotic Even in 2026. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-18T11:02:00.000Z"
+  },
+  {
+    "slug": "voice-cloning-for-customer-brands-a-buyers-guide",
+    "title": "Voice Cloning for Customer Brands: A Buyer's Guide",
+    "description": "Voice Cloning for Customer Brands: A Buyer's Guide",
+    "excerpt": "Voice Cloning for Customer Brands: A Buyer's Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "voice-cloning"
+    ],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-03-18T10:55:00.000Z"
+  },
+  {
+    "slug": "echo-cancellation-in-real-time-voice-ai",
+    "title": "Echo Cancellation in Real-Time Voice AI",
+    "description": "Echo Cancellation in Real-Time Voice AI",
+    "excerpt": "Echo Cancellation in Real-Time Voice AI. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-17T14:41:00.000Z"
+  },
+  {
+    "slug": "how-sample-rate-affects-voice-agent-quality",
+    "title": "How Sample Rate Affects Voice Agent Quality",
+    "description": "How Sample Rate Affects Voice Agent Quality",
+    "excerpt": "How Sample Rate Affects Voice Agent Quality. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-17T09:48:00.000Z"
+  },
+  {
+    "slug": "how-background-noise-affects-voice-agent-accuracy",
+    "title": "How Background Noise Affects Voice Agent Accuracy",
+    "description": "How Background Noise Affects Voice Agent Accuracy",
+    "excerpt": "How Background Noise Affects Voice Agent Accuracy. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-16T13:34:00.000Z"
+  },
+  {
+    "slug": "audio-codecs-for-voice-agents-opus-pcmu-and-more",
+    "title": "Audio Codecs for Voice Agents: Opus, PCMU, and More",
+    "description": "Audio Codecs for Voice Agents: Opus, PCMU, and More",
+    "excerpt": "Audio Codecs for Voice Agents: Opus, PCMU, and More. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-16T12:27:00.000Z"
+  },
+  {
+    "slug": "diarization-knowing-whos-speaking-in-a-voice-conversation",
+    "title": "Diarization: Knowing Who's Speaking in a Voice Conversation",
+    "description": "Diarization: Knowing Who's Speaking in a Voice Conversation",
+    "excerpt": "Diarization: Knowing Who's Speaking in a Voice Conversation. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-15T11:20:00.000Z"
+  },
+  {
+    "slug": "voice-activity-detection-in-production-voice-agents",
+    "title": "Voice Activity Detection in Production Voice Agents",
+    "description": "Voice Activity Detection in Production Voice Agents",
+    "excerpt": "Voice Activity Detection in Production Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "turn-taking"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-14T10:13:00.000Z"
+  },
+  {
+    "slug": "the-engineering-behind-sub-second-voice-agents",
+    "title": "The Engineering Behind Sub-Second Voice Agents",
+    "description": "The Engineering Behind Sub-Second Voice Agents",
+    "excerpt": "The Engineering Behind Sub-Second Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-14T09:06:00.000Z"
+  },
+  {
+    "slug": "how-stt-handles-disfluencies-and-filler-words",
+    "title": "How STT Handles Disfluencies and Filler Words",
+    "description": "How STT Handles Disfluencies and Filler Words",
+    "excerpt": "How STT Handles Disfluencies and Filler Words. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-13T14:59:00.000Z"
+  },
+  {
+    "slug": "multilingual-tts-choosing-a-voice-model",
+    "title": "Multilingual TTS: Choosing a Voice Model",
+    "description": "Multilingual TTS: Choosing a Voice Model",
+    "excerpt": "Multilingual TTS: Choosing a Voice Model. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts",
+      "multilingual"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-13T13:52:00.000Z"
+  },
+  {
+    "slug": "why-tts-quality-plateaus-and-how-to-push-past-it",
+    "title": "Why TTS Quality Plateaus and How to Push Past It",
+    "description": "Why TTS Quality Plateaus and How to Push Past It",
+    "excerpt": "Why TTS Quality Plateaus and How to Push Past It. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-12T12:45:00.000Z"
+  },
+  {
+    "slug": "how-tts-models-handle-numbers-dates-and-acronyms",
+    "title": "How TTS Models Handle Numbers, Dates, and Acronyms",
+    "description": "How TTS Models Handle Numbers, Dates, and Acronyms",
+    "excerpt": "How TTS Models Handle Numbers, Dates, and Acronyms. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-12T11:38:00.000Z"
+  },
+  {
+    "slug": "streaming-stt-how-to-cut-recognition-latency",
+    "title": "Streaming STT: How to Cut Recognition Latency",
+    "description": "Streaming STT: How to Cut Recognition Latency",
+    "excerpt": "Streaming STT: How to Cut Recognition Latency. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "stt",
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-11T10:31:00.000Z"
+  },
+  {
+    "slug": "streaming-tts-how-to-cut-first-audio-latency",
+    "title": "Streaming TTS: How to Cut First-Audio Latency",
+    "description": "Streaming TTS: How to Cut First-Audio Latency",
+    "excerpt": "Streaming TTS: How to Cut First-Audio Latency. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts",
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-11T09:24:00.000Z"
+  },
+  {
+    "slug": "latency-engineering-for-real-time-voice-agents",
+    "title": "Latency Engineering for Real-Time Voice Agents",
+    "description": "Latency Engineering for Real-Time Voice Agents",
+    "excerpt": "Latency Engineering for Real-Time Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-10T14:17:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "voice-cloning-ethics-a-practical-framework",
+    "title": "Voice Cloning Ethics: A Practical Framework",
+    "description": "Voice Cloning Ethics: A Practical Framework",
+    "excerpt": "Voice Cloning Ethics: A Practical Framework. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "voice-cloning-ethics"
+    ],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-03-10T13:10:00.000Z"
+  },
+  {
+    "slug": "voice-cloning-how-it-works-and-why-it-matters",
+    "title": "Voice Cloning: How It Works and Why It Matters",
+    "description": "Voice Cloning: How It Works and Why It Matters",
+    "excerpt": "Voice Cloning: How It Works and Why It Matters. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "voice-cloning"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-09T12:03:00.000Z"
+  },
+  {
+    "slug": "speech-to-text-word-error-rate-explained",
+    "title": "Speech-to-Text Word Error Rate Explained",
+    "description": "Speech-to-Text Word Error Rate Explained",
+    "excerpt": "Speech-to-Text Word Error Rate Explained. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-09T11:56:00.000Z"
+  },
+  {
+    "slug": "text-to-speech-in-2026-the-state-of-the-art",
+    "title": "Text-to-Speech in 2026: The State of the Art",
+    "description": "Text-to-Speech in 2026: The State of the Art",
+    "excerpt": "Text-to-Speech in 2026: The State of the Art. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "speech-tech",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-03-08T10:49:00.000Z",
+    "featured": true,
+    "pillar": true
+  },
+  {
+    "slug": "cost-comparison-hiring-a-receptionist-vs-deploying-ai",
+    "title": "Cost Comparison: Hiring a Receptionist vs Deploying AI",
+    "description": "Cost Comparison: Hiring a Receptionist vs Deploying AI",
+    "excerpt": "Cost Comparison: Hiring a Receptionist vs Deploying AI. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-08T09:42:00.000Z"
+  },
+  {
+    "slug": "how-ai-receptionists-coordinate-with-calendars",
+    "title": "How AI Receptionists Coordinate with Calendars",
+    "description": "How AI Receptionists Coordinate with Calendars",
+    "excerpt": "How AI Receptionists Coordinate with Calendars. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [
+      "function-calling"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-07T14:35:00.000Z"
+  },
+  {
+    "slug": "greeting-design-first-impression-engineering-for-ai-voices",
+    "title": "Greeting Design: First-Impression Engineering for AI Voices",
+    "description": "Greeting Design: First-Impression Engineering for AI Voices",
+    "excerpt": "Greeting Design: First-Impression Engineering for AI Voices. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-03-07T13:28:00.000Z"
+  },
+  {
+    "slug": "how-ai-receptionists-handle-repeat-callers",
+    "title": "How AI Receptionists Handle Repeat Callers",
+    "description": "How AI Receptionists Handle Repeat Callers",
+    "excerpt": "How AI Receptionists Handle Repeat Callers. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-06T12:21:00.000Z"
+  },
+  {
+    "slug": "when-to-hand-off-to-a-human-receptionist",
+    "title": "When to Hand Off to a Human Receptionist",
+    "description": "When to Hand Off to a Human Receptionist",
+    "excerpt": "When to Hand Off to a Human Receptionist. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-06T11:14:00.000Z"
+  },
+  {
+    "slug": "voicemail-replacement-why-ai-receptionists-win",
+    "title": "Voicemail Replacement: Why AI Receptionists Win",
+    "description": "Voicemail Replacement: Why AI Receptionists Win",
+    "excerpt": "Voicemail Replacement: Why AI Receptionists Win. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-05T10:07:00.000Z"
+  },
+  {
+    "slug": "how-ai-receptionists-should-handle-emergencies",
+    "title": "How AI Receptionists Should Handle Emergencies",
+    "description": "How AI Receptionists Should Handle Emergencies",
+    "excerpt": "How AI Receptionists Should Handle Emergencies. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-05T09:00:00.000Z"
+  },
+  {
+    "slug": "appointment-booking-via-voice-agent-a-complete-guide",
+    "title": "Appointment Booking via Voice Agent: A Complete Guide",
+    "description": "Appointment Booking via Voice Agent: A Complete Guide",
+    "excerpt": "Appointment Booking via Voice Agent: A Complete Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [
+      "function-calling"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-04T14:53:00.000Z"
+  },
+  {
+    "slug": "after-hours-coverage-with-ai-receptionists",
+    "title": "After-Hours Coverage with AI Receptionists",
+    "description": "After-Hours Coverage with AI Receptionists",
+    "excerpt": "After-Hours Coverage with AI Receptionists. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [
+      "after-hours"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-03T13:46:00.000Z"
+  },
+  {
+    "slug": "multi-department-call-routing-with-ai-voice-agents",
+    "title": "Multi-Department Call Routing with AI Voice Agents",
+    "description": "Multi-Department Call Routing with AI Voice Agents",
+    "excerpt": "Multi-Department Call Routing with AI Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-03T12:39:00.000Z"
+  },
+  {
+    "slug": "ai-receptionists-for-hotels-and-hospitality",
+    "title": "AI Receptionists for Hotels and Hospitality",
+    "description": "AI Receptionists for Hotels and Hospitality",
+    "excerpt": "AI Receptionists for Hotels and Hospitality. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-02T11:32:00.000Z"
+  },
+  {
+    "slug": "ai-receptionists-for-dental-practices",
+    "title": "AI Receptionists for Dental Practices",
+    "description": "AI Receptionists for Dental Practices",
+    "excerpt": "AI Receptionists for Dental Practices. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-02T10:25:00.000Z"
+  },
+  {
+    "slug": "ai-receptionists-for-healthcare-clinics",
+    "title": "AI Receptionists for Healthcare Clinics",
+    "description": "AI Receptionists for Healthcare Clinics",
+    "excerpt": "AI Receptionists for Healthcare Clinics. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [
+      "hipaa"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-01T14:11:00.000Z"
+  },
+  {
+    "slug": "ai-receptionists-for-law-firms",
+    "title": "AI Receptionists for Law Firms",
+    "description": "AI Receptionists for Law Firms",
+    "excerpt": "AI Receptionists for Law Firms. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-03-01T09:18:00.000Z"
+  },
+  {
+    "slug": "designing-an-ai-receptionist-from-first-principles",
+    "title": "Designing an AI Receptionist From First Principles",
+    "description": "Designing an AI Receptionist From First Principles",
+    "excerpt": "Designing an AI Receptionist From First Principles. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "ai-receptionist",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-28T13:04:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "when-ai-should-book-meetings-vs-hand-off-to-humans",
+    "title": "When AI Should Book Meetings vs Hand Off to Humans",
+    "description": "When AI Should Book Meetings vs Hand Off to Humans",
+    "excerpt": "When AI Should Book Meetings vs Hand Off to Humans. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-28T12:57:00.000Z"
+  },
+  {
+    "slug": "multilingual-lead-qualification-a-practical-guide",
+    "title": "Multilingual Lead Qualification: A Practical Guide",
+    "description": "Multilingual Lead Qualification: A Practical Guide",
+    "excerpt": "Multilingual Lead Qualification: A Practical Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [
+      "multilingual"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-27T11:50:00.000Z"
+  },
+  {
+    "slug": "inbound-voice-for-trade-shows-and-events",
+    "title": "Inbound Voice for Trade Shows and Events",
+    "description": "Inbound Voice for Trade Shows and Events",
+    "excerpt": "Inbound Voice for Trade Shows and Events. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-27T10:43:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-lead-qual-to-hubspot",
+    "title": "Connecting Voice Lead Qual to HubSpot",
+    "description": "Connecting Voice Lead Qual to HubSpot",
+    "excerpt": "Connecting Voice Lead Qual to HubSpot. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [
+      "hubspot",
+      "crm"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-26T14:29:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-should-handle-pricing-questions-on-inbound-calls",
+    "title": "How AI Agents Should Handle Pricing Questions on Inbound Calls",
+    "description": "How AI Agents Should Handle Pricing Questions on Inbound Calls",
+    "excerpt": "How AI Agents Should Handle Pricing Questions on Inbound Calls. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-26T09:36:00.000Z"
+  },
+  {
+    "slug": "connecting-voice-lead-qual-to-salesforce",
+    "title": "Connecting Voice Lead Qual to Salesforce",
+    "description": "Connecting Voice Lead Qual to Salesforce",
+    "excerpt": "Connecting Voice Lead Qual to Salesforce. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [
+      "salesforce",
+      "crm"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-25T13:22:00.000Z"
+  },
+  {
+    "slug": "lead-qualification-for-high-volume-marketing-channels",
+    "title": "Lead Qualification for High-Volume Marketing Channels",
+    "description": "Lead Qualification for High-Volume Marketing Channels",
+    "excerpt": "Lead Qualification for High-Volume Marketing Channels. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-25T12:15:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-handle-send-me-an-email-instead",
+    "title": "How AI Agents Handle \"Send Me an Email Instead\"",
+    "description": "How AI Agents Handle \"Send Me an Email Instead\"",
+    "excerpt": "How AI Agents Handle \"Send Me an Email Instead\". A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-24T11:08:00.000Z"
+  },
+  {
+    "slug": "designing-discovery-questions-for-ai-lead-qualification",
+    "title": "Designing Discovery Questions for AI Lead Qualification",
+    "description": "Designing Discovery Questions for AI Lead Qualification",
+    "excerpt": "Designing Discovery Questions for AI Lead Qualification. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-24T10:01:00.000Z"
+  },
+  {
+    "slug": "using-voice-agents-to-filter-out-tire-kickers",
+    "title": "Using Voice Agents to Filter Out Tire-Kickers",
+    "description": "Using Voice Agents to Filter Out Tire-Kickers",
+    "excerpt": "Using Voice Agents to Filter Out Tire-Kickers. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-23T14:47:00.000Z"
+  },
+  {
+    "slug": "inbound-voice-agents-for-saas-demos",
+    "title": "Inbound Voice Agents for SaaS Demos",
+    "description": "Inbound Voice Agents for SaaS Demos",
+    "excerpt": "Inbound Voice Agents for SaaS Demos. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-23T09:54:00.000Z"
+  },
+  {
+    "slug": "routing-qualified-leads-from-ai-agents-to-sales-reps",
+    "title": "Routing Qualified Leads from AI Agents to Sales Reps",
+    "description": "Routing Qualified Leads from AI Agents to Sales Reps",
+    "excerpt": "Routing Qualified Leads from AI Agents to Sales Reps. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [
+      "crm"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-22T13:40:00.000Z"
+  },
+  {
+    "slug": "how-to-score-leads-from-a-voice-conversation",
+    "title": "How to Score Leads From a Voice Conversation",
+    "description": "How to Score Leads From a Voice Conversation",
+    "excerpt": "How to Score Leads From a Voice Conversation. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-21T12:33:00.000Z"
+  },
+  {
+    "slug": "bant-vs-meddic-vs-champ-which-framework-for-ai-agents",
+    "title": "BANT vs MEDDIC vs CHAMP: Which Framework for AI Agents?",
+    "description": "BANT vs MEDDIC vs CHAMP: Which Framework for AI Agents?",
+    "excerpt": "BANT vs MEDDIC vs CHAMP: Which Framework for AI Agents?. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-21T11:26:00.000Z"
+  },
+  {
+    "slug": "inbound-lead-qualification-with-voice-agents",
+    "title": "Inbound Lead Qualification with Voice Agents",
+    "description": "Inbound Lead Qualification with Voice Agents",
+    "excerpt": "Inbound Lead Qualification with Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "lead-qualification",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-20T10:19:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "outbound-for-b2b-pipeline-renewals-and-win-backs",
+    "title": "Outbound for B2B: Pipeline, Renewals, and Win-Backs",
+    "description": "Outbound for B2B: Pipeline, Renewals, and Win-Backs",
+    "excerpt": "Outbound for B2B: Pipeline, Renewals, and Win-Backs. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-20T09:12:00.000Z"
+  },
+  {
+    "slug": "outbound-for-b2c-subscription-healthcare-and-auto",
+    "title": "Outbound for B2C: Subscription, Healthcare, and Auto",
+    "description": "Outbound for B2C: Subscription, Healthcare, and Auto",
+    "excerpt": "Outbound for B2C: Subscription, Healthcare, and Auto. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-19T14:05:00.000Z"
+  },
+  {
+    "slug": "how-to-run-an-outbound-ai-pilot-that-doesnt-embarrass-you",
+    "title": "How to Run an Outbound AI Pilot That Doesn't Embarrass You",
+    "description": "How to Run an Outbound AI Pilot That Doesn't Embarrass You",
+    "excerpt": "How to Run an Outbound AI Pilot That Doesn't Embarrass You. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-19T13:58:00.000Z"
+  },
+  {
+    "slug": "outbound-agent-metrics-that-actually-matter",
+    "title": "Outbound Agent Metrics That Actually Matter",
+    "description": "Outbound Agent Metrics That Actually Matter",
+    "excerpt": "Outbound Agent Metrics That Actually Matter. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-18T12:51:00.000Z"
+  },
+  {
+    "slug": "when-ai-should-hand-off-an-outbound-call-to-a-human",
+    "title": "When AI Should Hand Off an Outbound Call to a Human",
+    "description": "When AI Should Hand Off an Outbound Call to a Human",
+    "excerpt": "When AI Should Hand Off an Outbound Call to a Human. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-18T11:44:00.000Z"
+  },
+  {
+    "slug": "how-to-coach-an-ai-outbound-agent-like-an-sdr",
+    "title": "How to Coach an AI Outbound Agent Like an SDR",
+    "description": "How to Coach an AI Outbound Agent Like an SDR",
+    "excerpt": "How to Coach an AI Outbound Agent Like an SDR. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "evaluation"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-17T10:37:00.000Z"
+  },
+  {
+    "slug": "outbound-voice-agents-for-renewal-conversations",
+    "title": "Outbound Voice Agents for Renewal Conversations",
+    "description": "Outbound Voice Agents for Renewal Conversations",
+    "excerpt": "Outbound Voice Agents for Renewal Conversations. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-17T09:30:00.000Z"
+  },
+  {
+    "slug": "how-to-build-a-compliant-outbound-voice-agent-in-30-days",
+    "title": "How to Build a Compliant Outbound Voice Agent in 30 Days",
+    "description": "How to Build a Compliant Outbound Voice Agent in 30 Days",
+    "excerpt": "How to Build a Compliant Outbound Voice Agent in 30 Days. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-16T14:23:00.000Z"
+  },
+  {
+    "slug": "caller-id-and-trust-why-numbers-get-marked-as-spam",
+    "title": "Caller ID and Trust: Why Numbers Get Marked as Spam",
+    "description": "Caller ID and Trust: Why Numbers Get Marked as Spam",
+    "excerpt": "Caller ID and Trust: Why Numbers Get Marked as Spam. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-16T13:16:00.000Z"
+  },
+  {
+    "slug": "dtmf-and-ivr-navigation-for-outbound-voice-agents",
+    "title": "DTMF and IVR Navigation for Outbound Voice Agents",
+    "description": "DTMF and IVR Navigation for Outbound Voice Agents",
+    "excerpt": "DTMF and IVR Navigation for Outbound Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-02-15T12:09:00.000Z"
+  },
+  {
+    "slug": "voicemail-handling-for-outbound-ai-agents",
+    "title": "Voicemail Handling for Outbound AI Agents",
+    "description": "Voicemail Handling for Outbound AI Agents",
+    "excerpt": "Voicemail Handling for Outbound AI Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-15T11:02:00.000Z"
+  },
+  {
+    "slug": "how-to-personalize-outbound-voice-agents-at-scale",
+    "title": "How to Personalize Outbound Voice Agents at Scale",
+    "description": "How to Personalize Outbound Voice Agents at Scale",
+    "excerpt": "How to Personalize Outbound Voice Agents at Scale. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-14T10:55:00.000Z"
+  },
+  {
+    "slug": "lead-re-engagement-sequences-with-voice-agents",
+    "title": "Lead Re-Engagement Sequences with Voice Agents",
+    "description": "Lead Re-Engagement Sequences with Voice Agents",
+    "excerpt": "Lead Re-Engagement Sequences with Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-14T09:48:00.000Z"
+  },
+  {
+    "slug": "cold-email-vs-cold-call-vs-ai-cold-call-what-wins",
+    "title": "Cold Email vs Cold Call vs AI Cold Call: What Wins",
+    "description": "Cold Email vs Cold Call vs AI Cold Call: What Wins",
+    "excerpt": "Cold Email vs Cold Call vs AI Cold Call: What Wins. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-02-13T14:41:00.000Z"
+  },
+  {
+    "slug": "how-ai-voice-agents-book-meetings-on-calendars",
+    "title": "How AI Voice Agents Book Meetings on Calendars",
+    "description": "How AI Voice Agents Book Meetings on Calendars",
+    "excerpt": "How AI Voice Agents Book Meetings on Calendars. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "function-calling"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-13T13:34:00.000Z"
+  },
+  {
+    "slug": "when-to-use-ai-for-discovery-calls-and-when-not-to",
+    "title": "When to Use AI for Discovery Calls (and When Not To)",
+    "description": "When to Use AI for Discovery Calls (and When Not To)",
+    "excerpt": "When to Use AI for Discovery Calls (and When Not To). A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-12T12:27:00.000Z"
+  },
+  {
+    "slug": "designing-outbound-sequences-that-convert",
+    "title": "Designing Outbound Sequences That Convert",
+    "description": "Designing Outbound Sequences That Convert",
+    "excerpt": "Designing Outbound Sequences That Convert. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-12T11:20:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-should-handle-not-interested",
+    "title": "How AI Agents Should Handle \"Not Interested\"",
+    "description": "How AI Agents Should Handle \"Not Interested\"",
+    "excerpt": "How AI Agents Should Handle \"Not Interested\". A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-11T10:13:00.000Z"
+  },
+  {
+    "slug": "a2p-10dlc-explained-for-voice-agent-builders",
+    "title": "A2P 10DLC Explained for Voice Agent Builders",
+    "description": "A2P 10DLC Explained for Voice Agent Builders",
+    "excerpt": "A2P 10DLC Explained for Voice Agent Builders. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "a2p-10dlc",
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-10T14:59:00.000Z"
+  },
+  {
+    "slug": "voice-agents-for-sdr-workflows-a-field-guide",
+    "title": "Voice Agents for SDR Workflows: A Field Guide",
+    "description": "Voice Agents for SDR Workflows: A Field Guide",
+    "excerpt": "Voice Agents for SDR Workflows: A Field Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-10T09:06:00.000Z"
+  },
+  {
+    "slug": "tcpa-compliance-for-ai-powered-outbound-calls",
+    "title": "TCPA Compliance for AI-Powered Outbound Calls",
+    "description": "TCPA Compliance for AI-Powered Outbound Calls",
+    "excerpt": "TCPA Compliance for AI-Powered Outbound Calls. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [
+      "tcpa",
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-09T13:52:00.000Z"
+  },
+  {
+    "slug": "outbound-ai-calling-in-2026-a-practical-playbook",
+    "title": "Outbound AI Calling in 2026: A Practical Playbook",
+    "description": "Outbound AI Calling in 2026: A Practical Playbook",
+    "excerpt": "Outbound AI Calling in 2026: A Practical Playbook. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "outbound-sales",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-09T12:45:00.000Z",
+    "featured": true,
+    "pillar": true
+  },
+  {
+    "slug": "why-human-in-the-loop-beats-fully-autonomous-for-most-teams",
+    "title": "Why \"Human-in-the-Loop\" Beats \"Fully Autonomous\" for Most Teams",
+    "description": "Why \"Human-in-the-Loop\" Beats \"Fully Autonomous\" for Most Teams",
+    "excerpt": "Why \"Human-in-the-Loop\" Beats \"Fully Autonomous\" for Most Teams. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-08T11:38:00.000Z"
+  },
+  {
+    "slug": "how-to-calculate-roi-for-ai-customer-support",
+    "title": "How to Calculate ROI for AI Customer Support",
+    "description": "How to Calculate ROI for AI Customer Support",
+    "excerpt": "How to Calculate ROI for AI Customer Support. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-08T10:31:00.000Z"
+  },
+  {
+    "slug": "how-ai-support-agents-should-handle-account-verification",
+    "title": "How AI Support Agents Should Handle Account Verification",
+    "description": "How AI Support Agents Should Handle Account Verification",
+    "excerpt": "How AI Support Agents Should Handle Account Verification. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "compliance"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-07T14:17:00.000Z"
+  },
+  {
+    "slug": "designing-ai-agents-that-cancel-subscriptions-honestly",
+    "title": "Designing AI Agents That Cancel Subscriptions Honestly",
+    "description": "Designing AI Agents That Cancel Subscriptions Honestly",
+    "excerpt": "Designing AI Agents That Cancel Subscriptions Honestly. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-07T09:24:00.000Z"
+  },
+  {
+    "slug": "multilingual-support-when-and-how-to-add-a-second-language",
+    "title": "Multilingual Support: When and How to Add a Second Language",
+    "description": "Multilingual Support: When and How to Add a Second Language",
+    "excerpt": "Multilingual Support: When and How to Add a Second Language. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "multilingual"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-06T13:10:00.000Z"
+  },
+  {
+    "slug": "voice-agent-onboarding-a-30-day-plan-for-support-teams",
+    "title": "Voice Agent Onboarding: A 30-Day Plan for Support Teams",
+    "description": "Voice Agent Onboarding: A 30-Day Plan for Support Teams",
+    "excerpt": "Voice Agent Onboarding: A 30-Day Plan for Support Teams. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-06T12:03:00.000Z"
+  },
+  {
+    "slug": "reducing-repeat-contacts-with-better-knowledge-bases",
+    "title": "Reducing Repeat Contacts with Better Knowledge Bases",
+    "description": "Reducing Repeat Contacts with Better Knowledge Bases",
+    "excerpt": "Reducing Repeat Contacts with Better Knowledge Bases. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "knowledge-base"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-05T11:56:00.000Z"
+  },
+  {
+    "slug": "how-to-tag-and-categorize-ai-conversations",
+    "title": "How to Tag and Categorize AI Conversations",
+    "description": "How to Tag and Categorize AI Conversations",
+    "excerpt": "How to Tag and Categorize AI Conversations. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-05T10:49:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-coordinate-with-intercom",
+    "title": "How AI Agents Coordinate with Intercom",
+    "description": "How AI Agents Coordinate with Intercom",
+    "excerpt": "How AI Agents Coordinate with Intercom. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "intercom"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-04T14:35:00.000Z"
+  },
+  {
+    "slug": "quality-assurance-for-ai-voice-support",
+    "title": "Quality Assurance for AI Voice Support",
+    "description": "Quality Assurance for AI Voice Support",
+    "excerpt": "Quality Assurance for AI Voice Support. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "qa",
+      "evaluation"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-04T09:42:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-coordinate-with-helpdesks-like-zendesk",
+    "title": "How AI Agents Coordinate with Helpdesks Like Zendesk",
+    "description": "How AI Agents Coordinate with Helpdesks Like Zendesk",
+    "excerpt": "How AI Agents Coordinate with Helpdesks Like Zendesk. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "zendesk"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-03T13:28:00.000Z"
+  },
+  {
+    "slug": "self-service-vs-ai-assisted-support-a-decision-framework",
+    "title": "Self-Service vs AI-Assisted Support: A Decision Framework",
+    "description": "Self-Service vs AI-Assisted Support: A Decision Framework",
+    "excerpt": "Self-Service vs AI-Assisted Support: A Decision Framework. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-03T12:21:00.000Z"
+  },
+  {
+    "slug": "designing-voice-agents-for-after-hours-support",
+    "title": "Designing Voice Agents for After-Hours Support",
+    "description": "Designing Voice Agents for After-Hours Support",
+    "excerpt": "Designing Voice Agents for After-Hours Support. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "after-hours"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-02T11:14:00.000Z"
+  },
+  {
+    "slug": "when-to-let-an-ai-agent-apologize-and-when-not-to",
+    "title": "When to Let an AI Agent Apologize (and When Not To)",
+    "description": "When to Let an AI Agent Apologize (and When Not To)",
+    "excerpt": "When to Let an AI Agent Apologize (and When Not To). A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-02T10:07:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-should-handle-angry-customers",
+    "title": "How AI Agents Should Handle Angry Customers",
+    "description": "How AI Agents Should Handle Angry Customers",
+    "excerpt": "How AI Agents Should Handle Angry Customers. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-02-01T09:00:00.000Z"
+  },
+  {
+    "slug": "cutting-average-handle-time-with-voice-agents",
+    "title": "Cutting Average Handle Time with Voice Agents",
+    "description": "Cutting Average Handle Time with Voice Agents",
+    "excerpt": "Cutting Average Handle Time with Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-31T14:53:00.000Z"
+  },
+  {
+    "slug": "why-first-contact-resolution-is-the-north-star-for-ai-support",
+    "title": "Why First-Contact Resolution Is the North Star for AI Support",
+    "description": "Why First-Contact Resolution Is the North Star for AI Support",
+    "excerpt": "Why First-Contact Resolution Is the North Star for AI Support. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-31T13:46:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-handle-multi-step-account-issues",
+    "title": "How AI Agents Handle Multi-Step Account Issues",
+    "description": "How AI Agents Handle Multi-Step Account Issues",
+    "excerpt": "How AI Agents Handle Multi-Step Account Issues. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-30T12:39:00.000Z"
+  },
+  {
+    "slug": "building-trust-between-ai-support-agents-and-customers",
+    "title": "Building Trust Between AI Support Agents and Customers",
+    "description": "Building Trust Between AI Support Agents and Customers",
+    "excerpt": "Building Trust Between AI Support Agents and Customers. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-01-30T11:32:00.000Z"
+  },
+  {
+    "slug": "the-anatomy-of-an-ai-resolved-support-ticket",
+    "title": "The Anatomy of an AI-Resolved Support Ticket",
+    "description": "The Anatomy of an AI-Resolved Support Ticket",
+    "excerpt": "The Anatomy of an AI-Resolved Support Ticket. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-29T10:25:00.000Z"
+  },
+  {
+    "slug": "how-to-migrate-from-a-legacy-contact-center-to-ai",
+    "title": "How to Migrate from a Legacy Contact Center to AI",
+    "description": "How to Migrate from a Legacy Contact Center to AI",
+    "excerpt": "How to Migrate from a Legacy Contact Center to AI. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-29T09:18:00.000Z"
+  },
+  {
+    "slug": "csat-for-ai-agents-benchmarks-and-frameworks",
+    "title": "CSAT for AI Agents: Benchmarks and Frameworks",
+    "description": "CSAT for AI Agents: Benchmarks and Frameworks",
+    "excerpt": "CSAT for AI Agents: Benchmarks and Frameworks. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "csat",
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-28T14:11:00.000Z"
+  },
+  {
+    "slug": "designing-escalation-paths-between-ai-and-human-agents",
+    "title": "Designing Escalation Paths Between AI and Human Agents",
+    "description": "Designing Escalation Paths Between AI and Human Agents",
+    "excerpt": "Designing Escalation Paths Between AI and Human Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-28T13:04:00.000Z"
+  },
+  {
+    "slug": "how-ai-agents-handle-refunds-and-returns",
+    "title": "How AI Agents Handle Refunds and Returns",
+    "description": "How AI Agents Handle Refunds and Returns",
+    "excerpt": "How AI Agents Handle Refunds and Returns. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-27T12:57:00.000Z"
+  },
+  {
+    "slug": "voice-vs-chat-for-customer-support-which-to-deploy-first",
+    "title": "Voice vs Chat for Customer Support: Which to Deploy First",
+    "description": "Voice vs Chat for Customer Support: Which to Deploy First",
+    "excerpt": "Voice vs Chat for Customer Support: Which to Deploy First. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-27T11:50:00.000Z"
+  },
+  {
+    "slug": "building-a-tier-1-ai-support-agent-step-by-step",
+    "title": "Building a Tier-1 AI Support Agent Step by Step",
+    "description": "Building a Tier-1 AI Support Agent Step by Step",
+    "excerpt": "Building a Tier-1 AI Support Agent Step by Step. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-26T10:43:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "what-is-ai-deflection-and-how-to-measure-it",
+    "title": "What Is AI Deflection (and How to Measure It)",
+    "description": "What Is AI Deflection (and How to Measure It)",
+    "excerpt": "What Is AI Deflection (and How to Measure It). A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [
+      "deflection",
+      "analytics"
+    ],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-26T09:36:00.000Z"
+  },
+  {
+    "slug": "the-definitive-guide-to-ai-customer-support-in-2026",
+    "title": "The Definitive Guide to AI Customer Support in 2026",
+    "description": "The Definitive Guide to AI Customer Support in 2026",
+    "excerpt": "The Definitive Guide to AI Customer Support in 2026. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "customer-support",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-25T14:29:00.000Z",
+    "featured": true,
+    "pillar": true
+  },
+  {
+    "slug": "how-to-handle-personally-identifiable-information-in-voice-agents",
+    "title": "How to Handle Personally Identifiable Information in Voice Agents",
+    "description": "How to Handle Personally Identifiable Information in Voice Agents",
+    "excerpt": "How to Handle Personally Identifiable Information in Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "pii",
+      "compliance"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-25T13:22:00.000Z"
+  },
+  {
+    "slug": "designing-voice-agents-that-ask-better-questions",
+    "title": "Designing Voice Agents That Ask Better Questions",
+    "description": "Designing Voice Agents That Ask Better Questions",
+    "excerpt": "Designing Voice Agents That Ask Better Questions. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-24T12:15:00.000Z"
+  },
+  {
+    "slug": "open-source-vs-closed-source-llms-for-voice-agents",
+    "title": "Open-Source vs Closed-Source LLMs for Voice Agents",
+    "description": "Open-Source vs Closed-Source LLMs for Voice Agents",
+    "excerpt": "Open-Source vs Closed-Source LLMs for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-24T11:08:00.000Z"
+  },
+  {
+    "slug": "how-llms-decide-what-to-say-next-in-a-voice-conversation",
+    "title": "How LLMs Decide What to Say Next in a Voice Conversation",
+    "description": "How LLMs Decide What to Say Next in a Voice Conversation",
+    "excerpt": "How LLMs Decide What to Say Next in a Voice Conversation. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-23T10:01:00.000Z"
+  },
+  {
+    "slug": "red-teaming-your-voice-agent",
+    "title": "Red-Teaming Your Voice Agent",
+    "description": "Red-Teaming Your Voice Agent",
+    "excerpt": "Red-Teaming Your Voice Agent. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "red-teaming",
+      "guardrails"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-23T09:54:00.000Z"
+  },
+  {
+    "slug": "building-a-conversation-memory-layer-for-voice-agents",
+    "title": "Building a Conversation Memory Layer for Voice Agents",
+    "description": "Building a Conversation Memory Layer for Voice Agents",
+    "excerpt": "Building a Conversation Memory Layer for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "rag"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-22T14:47:00.000Z"
+  },
+  {
+    "slug": "why-context-windows-matter-less-than-you-think-for-voice",
+    "title": "Why Context Windows Matter Less Than You Think for Voice",
+    "description": "Why Context Windows Matter Less Than You Think for Voice",
+    "excerpt": "Why Context Windows Matter Less Than You Think for Voice. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-22T13:40:00.000Z"
+  },
+  {
+    "slug": "how-to-ab-test-voice-agent-prompts",
+    "title": "How to A/B Test Voice Agent Prompts",
+    "description": "How to A/B Test Voice Agent Prompts",
+    "excerpt": "How to A/B Test Voice Agent Prompts. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "evaluation"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-21T12:33:00.000Z"
+  },
+  {
+    "slug": "streaming-llm-outputs-to-voice-the-engineering",
+    "title": "Streaming LLM Outputs to Voice: The Engineering",
+    "description": "Streaming LLM Outputs to Voice: The Engineering",
+    "excerpt": "Streaming LLM Outputs to Voice: The Engineering. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-20T11:26:00.000Z"
+  },
+  {
+    "slug": "the-role-of-embeddings-in-voice-agent-knowledge",
+    "title": "The Role of Embeddings in Voice Agent Knowledge",
+    "description": "The Role of Embeddings in Voice Agent Knowledge",
+    "excerpt": "The Role of Embeddings in Voice Agent Knowledge. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "rag"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-20T10:19:00.000Z"
+  },
+  {
+    "slug": "how-to-stop-a-voice-agent-from-hallucinating",
+    "title": "How to Stop a Voice Agent from Hallucinating",
+    "description": "How to Stop a Voice Agent from Hallucinating",
+    "excerpt": "How to Stop a Voice Agent from Hallucinating. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "guardrails",
+      "rag"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-19T14:05:00.000Z"
+  },
+  {
+    "slug": "multi-agent-architectures-for-customer-service",
+    "title": "Multi-Agent Architectures for Customer Service",
+    "description": "Multi-Agent Architectures for Customer Service",
+    "excerpt": "Multi-Agent Architectures for Customer Service. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-19T09:12:00.000Z"
+  },
+  {
+    "slug": "designing-system-prompts-for-multi-turn-voice-conversations",
+    "title": "Designing System Prompts for Multi-Turn Voice Conversations",
+    "description": "Designing System Prompts for Multi-Turn Voice Conversations",
+    "excerpt": "Designing System Prompts for Multi-Turn Voice Conversations. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-18T13:58:00.000Z"
+  },
+  {
+    "slug": "tool-use-vs-function-calling-whats-the-difference",
+    "title": "Tool Use vs Function Calling: What's the Difference?",
+    "description": "Tool Use vs Function Calling: What's the Difference?",
+    "excerpt": "Tool Use vs Function Calling: What's the Difference?. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "function-calling"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-18T12:51:00.000Z"
+  },
+  {
+    "slug": "why-smaller-llms-often-win-for-voice-agents",
+    "title": "Why Smaller LLMs Often Win for Voice Agents",
+    "description": "Why Smaller LLMs Often Win for Voice Agents",
+    "excerpt": "Why Smaller LLMs Often Win for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-17T11:44:00.000Z"
+  },
+  {
+    "slug": "guardrails-for-voice-agents-a-pragmatic-take",
+    "title": "Guardrails for Voice Agents: A Pragmatic Take",
+    "description": "Guardrails for Voice Agents: A Pragmatic Take",
+    "excerpt": "Guardrails for Voice Agents: A Pragmatic Take. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "guardrails"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-17T10:37:00.000Z"
+  },
+  {
+    "slug": "retrieval-augmented-generation-for-voice-agents",
+    "title": "Retrieval-Augmented Generation for Voice Agents",
+    "description": "Retrieval-Augmented Generation for Voice Agents",
+    "excerpt": "Retrieval-Augmented Generation for Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "rag",
+      "knowledge-base"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-16T14:23:00.000Z"
+  },
+  {
+    "slug": "llm-evaluation-for-conversational-agents",
+    "title": "LLM Evaluation for Conversational Agents",
+    "description": "LLM Evaluation for Conversational Agents",
+    "excerpt": "LLM Evaluation for Conversational Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "evaluation"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-16T09:30:00.000Z"
+  },
+  {
+    "slug": "how-to-give-a-voice-agent-long-term-memory",
+    "title": "How to Give a Voice Agent Long-Term Memory",
+    "description": "How to Give a Voice Agent Long-Term Memory",
+    "excerpt": "How to Give a Voice Agent Long-Term Memory. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "rag"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-15T13:16:00.000Z"
+  },
+  {
+    "slug": "prompt-engineering-for-voice-vs-text-agents",
+    "title": "Prompt Engineering for Voice (vs Text) Agents",
+    "description": "Prompt Engineering for Voice (vs Text) Agents",
+    "excerpt": "Prompt Engineering for Voice (vs Text) Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-15T12:09:00.000Z"
+  },
+  {
+    "slug": "function-calling-for-voice-agents-a-practical-guide",
+    "title": "Function Calling for Voice Agents: A Practical Guide",
+    "description": "Function Calling for Voice Agents: A Practical Guide",
+    "excerpt": "Function Calling for Voice Agents: A Practical Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [
+      "function-calling"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-14T11:02:00.000Z"
+  },
+  {
+    "slug": "how-large-language-models-power-voice-agents",
+    "title": "How Large Language Models Power Voice Agents",
+    "description": "How Large Language Models Power Voice Agents",
+    "excerpt": "How Large Language Models Power Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "conversational-ai",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-14T10:55:00.000Z",
+    "featured": true,
+    "pillar": true
+  },
+  {
+    "slug": "the-hidden-complexity-of-numbers-in-voice-agents",
+    "title": "The Hidden Complexity of Numbers in Voice Agents",
+    "description": "The Hidden Complexity of Numbers in Voice Agents",
+    "excerpt": "The Hidden Complexity of Numbers in Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "tts",
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-13T14:41:00.000Z"
+  },
+  {
+    "slug": "how-voice-agents-handle-accents-and-dialects",
+    "title": "How Voice Agents Handle Accents and Dialects",
+    "description": "How Voice Agents Handle Accents and Dialects",
+    "excerpt": "How Voice Agents Handle Accents and Dialects. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "stt",
+      "multilingual"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-13T09:48:00.000Z"
+  },
+  {
+    "slug": "how-to-measure-voice-agent-quality",
+    "title": "How to Measure Voice Agent Quality",
+    "description": "How to Measure Voice Agent Quality",
+    "excerpt": "How to Measure Voice Agent Quality. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "evaluation"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-12T13:34:00.000Z"
+  },
+  {
+    "slug": "first-time-builders-guide-to-voice-agents",
+    "title": "First-Time Builder's Guide to Voice Agents",
+    "description": "First-Time Builder's Guide to Voice Agents",
+    "excerpt": "First-Time Builder's Guide to Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-12T12:27:00.000Z"
+  },
+  {
+    "slug": "why-voice-ai-will-transform-phone-channels-by-2030",
+    "title": "Why Voice AI Will Transform Phone Channels by 2030",
+    "description": "Why Voice AI Will Transform Phone Channels by 2030",
+    "excerpt": "Why Voice AI Will Transform Phone Channels by 2030. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-01-11T11:20:00.000Z"
+  },
+  {
+    "slug": "voice-agent-use-cases-a-field-guide",
+    "title": "Voice Agent Use Cases: A Field Guide",
+    "description": "Voice Agent Use Cases: A Field Guide",
+    "excerpt": "Voice Agent Use Cases: A Field Guide. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-10T10:13:00.000Z"
+  },
+  {
+    "slug": "how-voice-agents-recover-from-misunderstandings",
+    "title": "How Voice Agents Recover from Misunderstandings",
+    "description": "How Voice Agents Recover from Misunderstandings",
+    "excerpt": "How Voice Agents Recover from Misunderstandings. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-10T09:06:00.000Z"
+  },
+  {
+    "slug": "the-difference-between-streaming-and-non-streaming-voice-agents",
+    "title": "The Difference Between Streaming and Non-Streaming Voice Agents",
+    "description": "The Difference Between Streaming and Non-Streaming Voice Agents",
+    "excerpt": "The Difference Between Streaming and Non-Streaming Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-09T14:59:00.000Z"
+  },
+  {
+    "slug": "how-voice-agents-decide-when-to-stop-talking",
+    "title": "How Voice Agents Decide When to Stop Talking",
+    "description": "How Voice Agents Decide When to Stop Talking",
+    "excerpt": "How Voice Agents Decide When to Stop Talking. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "turn-taking"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-09T13:52:00.000Z"
+  },
+  {
+    "slug": "synchronous-vs-asynchronous-voice-agents",
+    "title": "Synchronous vs Asynchronous Voice Agents",
+    "description": "Synchronous vs Asynchronous Voice Agents",
+    "excerpt": "Synchronous vs Asynchronous Voice Agents. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-08T12:45:00.000Z"
+  },
+  {
+    "slug": "what-makes-a-voice-agent-production-ready",
+    "title": "What Makes a Voice Agent \"Production Ready\"",
+    "description": "What Makes a Voice Agent \"Production Ready\"",
+    "excerpt": "What Makes a Voice Agent \"Production Ready\". A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "evaluation",
+      "observability"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-08T11:38:00.000Z"
+  },
+  {
+    "slug": "why-voice-agents-sound-more-human-every-year",
+    "title": "Why Voice Agents Sound More Human Every Year",
+    "description": "Why Voice Agents Sound More Human Every Year",
+    "excerpt": "Why Voice Agents Sound More Human Every Year. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "tts"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-07T10:31:00.000Z"
+  },
+  {
+    "slug": "how-voice-agents-differ-from-voice-assistants",
+    "title": "How Voice Agents Differ from Voice Assistants",
+    "description": "How Voice Agents Differ from Voice Assistants",
+    "excerpt": "How Voice Agents Differ from Voice Assistants. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-07T09:24:00.000Z"
+  },
+  {
+    "slug": "voice-agent-persona-design-a-framework",
+    "title": "Voice Agent Persona Design: A Framework",
+    "description": "Voice Agent Persona Design: A Framework",
+    "excerpt": "Voice Agent Persona Design: A Framework. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-06T14:17:00.000Z"
+  },
+  {
+    "slug": "voice-ai-glossary-50-terms-you-need-to-know",
+    "title": "Voice AI Glossary: 50 Terms You Need to Know",
+    "description": "Voice AI Glossary: 50 Terms You Need to Know",
+    "excerpt": "Voice AI Glossary: 50 Terms You Need to Know. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-01-06T13:10:00.000Z"
+  },
+  {
+    "slug": "the-real-cost-of-a-voice-agent-conversation",
+    "title": "The Real Cost of a Voice Agent Conversation",
+    "description": "The Real Cost of a Voice Agent Conversation",
+    "excerpt": "The Real Cost of a Voice Agent Conversation. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "rohan-pavuluri",
+    "publishedAt": "2026-01-05T12:03:00.000Z"
+  },
+  {
+    "slug": "what-voice-agents-can-and-cant-do-in-2026",
+    "title": "What Voice Agents Can and Can't Do in 2026",
+    "description": "What Voice Agents Can and Can't Do in 2026",
+    "excerpt": "What Voice Agents Can and Can't Do in 2026. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-01-05T11:56:00.000Z"
+  },
+  {
+    "slug": "how-voice-agents-handle-interruptions-gracefully",
+    "title": "How Voice Agents Handle Interruptions Gracefully",
+    "description": "How Voice Agents Handle Interruptions Gracefully",
+    "excerpt": "How Voice Agents Handle Interruptions Gracefully. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "barge-in"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-04T10:49:00.000Z"
+  },
+  {
+    "slug": "the-anatomy-of-a-voice-agent-pipeline",
+    "title": "The Anatomy of a Voice Agent Pipeline",
+    "description": "The Anatomy of a Voice Agent Pipeline",
+    "excerpt": "The Anatomy of a Voice Agent Pipeline. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "tts",
+      "stt"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-04T09:42:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "turn-taking-and-barge-in-the-mechanics-of-natural-conversation",
+    "title": "Turn-Taking and Barge-In: The Mechanics of Natural Conversation",
+    "description": "Turn-Taking and Barge-In: The Mechanics of Natural Conversation",
+    "excerpt": "Turn-Taking and Barge-In: The Mechanics of Natural Conversation. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "turn-taking",
+      "barge-in"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-03T14:35:00.000Z"
+  },
+  {
+    "slug": "latency-in-voice-ai-why-sub-500ms-matters",
+    "title": "Latency in Voice AI: Why Sub-500ms Matters",
+    "description": "Latency in Voice AI: Why Sub-500ms Matters",
+    "excerpt": "Latency in Voice AI: Why Sub-500ms Matters. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-03T13:28:00.000Z"
+  },
+  {
+    "slug": "voice-agents-vs-chatbots-when-to-use-which",
+    "title": "Voice Agents vs Chatbots: When to Use Which",
+    "description": "Voice Agents vs Chatbots: When to Use Which",
+    "excerpt": "Voice Agents vs Chatbots: When to Use Which. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-02T12:21:00.000Z"
+  },
+  {
+    "slug": "voice-agents-vs-ivr-a-side-by-side-comparison",
+    "title": "Voice Agents vs IVR: A Side-by-Side Comparison",
+    "description": "Voice Agents vs IVR: A Side-by-Side Comparison",
+    "excerpt": "Voice Agents vs IVR: A Side-by-Side Comparison. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-01-02T11:14:00.000Z"
+  },
+  {
+    "slug": "how-a-conversational-voice-agent-actually-works-under-the-hood",
+    "title": "How a Conversational Voice Agent Actually Works (Under the Hood)",
+    "description": "How a Conversational Voice Agent Actually Works (Under the Hood)",
+    "excerpt": "How a Conversational Voice Agent Actually Works (Under the Hood). A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [
+      "tts",
+      "stt",
+      "latency"
+    ],
+    "author": "tyler-weitzman",
+    "publishedAt": "2026-01-01T10:07:00.000Z",
+    "pillar": true
+  },
+  {
+    "slug": "what-is-a-voice-agent-a-2026-primer",
+    "title": "What Is a Voice Agent? A 2026 Primer",
+    "description": "What Is a Voice Agent? A 2026 Primer",
+    "excerpt": "What Is a Voice Agent? A 2026 Primer. A practical, vendor-neutral guide for teams building or buying voice AI agents.",
+    "category": "voice-ai-fundamentals",
+    "topics": [],
+    "author": "cliff-weitzman",
+    "publishedAt": "2026-01-01T09:00:00.000Z",
+    "featured": true,
+    "pillar": true
+  }
+]

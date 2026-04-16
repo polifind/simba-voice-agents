@@ -2,10 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { SimbaLogo } from '@/components/brand/SimbaLogo';
 import { Button } from '@/components/ui/Button';
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { cn } from '@/lib/utils';
+
+// Routes where the marketing header should NOT render
+const APP_ROUTES = ['/dashboard', '/login', '/signup'];
 
 const industries = [
   { name: 'Telecommunications', href: '/agents/telecommunications' },
@@ -67,8 +71,14 @@ function NavDropdown({ label, items, open, onOpen, onClose }: {
 }
 
 export function Header() {
+  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  // Hide on app routes — they have their own chrome
+  if (APP_ROUTES.some((r) => pathname === r || pathname.startsWith(r + '/'))) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-simba-gray-200">
@@ -99,6 +109,9 @@ export function Header() {
               onOpen={() => setOpenDropdown('about')}
               onClose={() => setOpenDropdown(null)}
             />
+            <Link href="/resources" className="px-4 py-2 text-sm font-medium text-simba-gray-700 hover:text-simba-black rounded-lg hover:bg-simba-gray-50 transition-colors">
+              Resources
+            </Link>
             <Link href="/pricing" className="px-4 py-2 text-sm font-medium text-simba-gray-700 hover:text-simba-black rounded-lg hover:bg-simba-gray-50 transition-colors">
               Pricing
             </Link>
@@ -142,6 +155,9 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <Link href="/resources" className="block py-2 text-sm font-medium text-simba-gray-700" onClick={() => setMobileOpen(false)}>
+              Resources
+            </Link>
             <Link href="/pricing" className="block py-2 text-sm font-medium text-simba-gray-700" onClick={() => setMobileOpen(false)}>
               Pricing
             </Link>
