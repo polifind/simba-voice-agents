@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import {
@@ -125,9 +126,14 @@ export function Sidebar() {
     <aside className="hidden lg:flex flex-col w-64 h-screen sticky top-0 border-r border-simba-gray-200 bg-white">
       <div className="px-5 py-5 border-b border-simba-gray-100">
         <Link href="/dashboard" className="flex items-center gap-2">
-          <div className="h-6 w-6 rounded-md bg-gradient-to-br from-simba-blue to-simba-blue-light flex items-center justify-center text-white font-black text-xs">
-            S
-          </div>
+          <Image
+            src="/simba-mark.png"
+            alt="SIMBA"
+            width={24}
+            height={24}
+            className="h-6 w-6"
+            priority
+          />
           <span className="font-black text-simba-black">SIMBA</span>
         </Link>
       </div>

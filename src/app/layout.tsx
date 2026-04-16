@@ -4,11 +4,20 @@ import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://simbavoice.ai'),
   title: {
     default: 'SIMBA Voice Agents - The Conversational AI Agents Platform',
     template: '%s | SIMBA Voice Agents',
   },
   description: 'Deploy natural, human-sounding AI agents in 70+ languages with low latency across voice or chat. Connected to your knowledge base and tools.',
+  openGraph: {
+    title: 'SIMBA Voice Agents',
+    description: 'The Conversational AI Agents Platform',
+    url: 'https://simbavoice.ai',
+    siteName: 'SIMBA Voice Agents',
+    images: [{ url: '/simba-mark-512.png', width: 512, height: 512 }],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
